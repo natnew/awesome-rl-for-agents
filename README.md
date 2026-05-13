@@ -41,12 +41,18 @@ A curated map of reinforcement learning for agents: systems that learn through i
 ## Agent environments and task worlds
 
 - **[WebArena: A Realistic Web Environment for Building Autonomous Agents](https://arxiv.org/abs/2307.13854)** — Multi-site autonomous web navigation with reproducible infrastructure.
+- **[BrowserGym](https://github.com/ServiceNow/BrowserGym)** — Open Gym-style framework for designing, testing, and evaluating browser agents across web task environments.
+- **[WorkArena: How Capable Are Web Agents at Solving Common Knowledge Work Tasks?](https://arxiv.org/abs/2403.07718)** — Enterprise web-agent benchmark built around common knowledge-worker workflows in browser-based software.
+- **[VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks](https://arxiv.org/abs/2401.13649)** — Multimodal web-agent benchmark focused on visually grounded tasks in realistic web environments.
 - **[WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents](https://arxiv.org/abs/2207.01206)** — Simulated e-commerce shopping from language goals.
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.12941)** — Repository-scale software engineering tasks grounded in real issues and patches.
+- **[SWE-Gym: Training Software Engineering Agents and Verifiers](https://arxiv.org/abs/2412.21139)** — Environment for training software engineering agents with real Python repositories, executable runtimes, unit tests, and natural-language issue specifications.
 - **[OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments](https://arxiv.org/abs/2404.07972)** — GUI-level OS interaction across real applications.
 - **[τ-bench](https://github.com/sierra-research/tau-bench)** — Customer-service-style domains with APIs, policies, and simulated users for tool-agent-user evaluation.
 - **[ToolBench: Facilitating Large Language Models to Master 16000+ Real-world APIs](https://arxiv.org/abs/2305.00447)** — Tool-use corpus and execution-aware training and evaluation.
 - **[AgentBench: Evaluating LLMs as Agents](https://arxiv.org/abs/2308.03688)** — Multi-environment suite spanning OS, databases, knowledge graphs, and digital card games.
+- **[AgentGym: Evolving Large Language Model-based Agents Across Diverse Environments](https://arxiv.org/abs/2406.04151)** — Framework for training and evaluating LLM agents across diverse interactive environments, trajectory data, and scalable self-evolution.
+- **[AgentGym-RL: Training LLM Agents for Long-Horizon Decision Making through Multi-Turn Reinforcement Learning](https://arxiv.org/abs/2509.08755)** — RL framework for multi-turn interactive agents across real-world scenarios, with emphasis on long-horizon exploration and stability.
 - **[GAIA: A Benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** — Multi-step assistant tasks requiring web, tools, and reasoning.
 - **[AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents](https://arxiv.org/abs/2407.18901)** — Stateful API-level “app world” for coding agents.
 - **[Berkeley Function Calling Leaderboard (Gorilla)](https://gorilla.cs.berkeley.edu/leaderboard.html)** — Leaderboard and tooling for evaluating function-calling reliability.
@@ -55,19 +61,41 @@ A curated map of reinforcement learning for agents: systems that learn through i
 
 ## Rollouts, trajectories and credit assignment
 
+Trajectory learning is central to RL for agents because the unit of improvement is often not a single answer, but an interaction trace: observations, tool calls, intermediate failures, retries, state transitions, and final outcomes. This makes credit assignment harder than in single-turn preference optimisation, but also makes agent learning much closer to real deployment behaviour.
+
 - **[Decision Transformer: Reinforcement Learning via Sequence Modeling](https://arxiv.org/abs/2106.01345)** — Offline control as conditional trajectory modelling; useful when credit is assigned at the sequence level rather than per atomic environment step.
 - **[ReST^EM: Reinforcement Learning with Self-Training for Language Modeling](https://arxiv.org/abs/2308.08998)** — Iterative grow-and-filter self-training from model rollouts, treating sampled trajectories as data for policy improvement.
+- **[AgentGym Trajectories](https://github.com/WooooDyy/AgentGym)** — Trajectory data for equipping LLM agents with prior interactive capabilities before or during environment-driven improvement.
+- **[AgentGym-RL / ScalingInter-RL](https://arxiv.org/abs/2509.08755)** — RL framework for long-horizon, multi-turn agent learning with emphasis on stability, exploration, and avoiding behavioural collapse.
+- **[ProRL Agent: Rollout-as-a-Service for RL Training of Multi-Turn LLM Agents](https://arxiv.org/abs/2603.18815)** — Scalable rollout infrastructure for sandboxed trajectory collection and RL training across software engineering, coding, math, and STEM tasks.
+- **[Agent Lightning: Train ANY AI Agents with Reinforcement Learning](https://arxiv.org/abs/2508.03680)** — Framework for adding reinforcement learning to existing agents by decoupling agent execution from RL training.
 
 ## Tool-use and API-agent RL
 
 - **[Tool Learning with Foundation Models](https://arxiv.org/abs/2402.17153)** — Survey connecting tool acquisition, mastering, and creativity to foundation-model agents acting through APIs and tools.
 - **[CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning](https://arxiv.org/abs/2207.01780)** — RL fine-tuning with compiler and execution feedback as the environment signal over program rollouts.
 - **[R1-Code-Interpreter: LLMs Reason with Code via Supervised and Multi-stage Reinforcement Learning](https://arxiv.org/abs/2505.21668)** — Multi-turn Code Interpreter interaction with curriculum **GRPO** across diverse tasks; bridges tool loops and training infrastructure.
+- **[RLTR: Reinforcement Learning with Tool-use Rewards](https://arxiv.org/abs/2508.19598)** — RL framework for LLM agent planning that rewards tool-use completeness across multi-step tool invocation sequences.
+- **[Tool-R1: Sample-Efficient Reinforcement Learning for Agentic Tool Use](https://arxiv.org/abs/2509.12867)** — RL framework for compositional, multi-step tool use through executable code generation.
+- **[ARTIST: Agentic Reasoning and Tool Integration for LLMs via Reinforcement Learning](https://arxiv.org/abs/2505.01441)** — Training approach that makes tool invocation and environment interaction first-class operations for agentic LLMs.
+
+See also **[OpenPipe/ART](#training-systems-and-infrastructure)** for multi-turn tool-use agents, traced rollouts, and task-specific rewards.
 
 ## Verifiable rewards and reward engineering
 
 - **[Let’s Verify Step by Step](https://arxiv.org/abs/2305.20050)** — **Process supervision** with outcome and step-level signals—central when rewards come from verifiable intermediate structure, not only final outcomes.
 - **[PrimeIntellect-ai/verifiers](https://github.com/PrimeIntellect-ai/verifiers)** — Environments expressed as **Python `assert`s** for training and evaluating LMs with **RL**, emphasising automatically checkable rewards.
+- **[Agent-RLVR: Training Software Engineering Agents via Guidance and Environment Rewards](https://arxiv.org/abs/2506.11425)** — Extends RLVR to agentic software-engineering tasks, where long-horizon, sparse-reward settings make naive verifier rewards difficult.
+- **[Awesome RLVR](https://github.com/opendilab/awesome-RLVR)** — Curated resources on reinforcement learning with verifiable rewards for math, code, and other automatically checkable domains.
+
+SWE-Gym also belongs here conceptually: its executable runtimes and unit tests turn software-engineering environments into grounded verifier and reward sources.
+
+### Reward signal types
+
+- **Outcome rewards** — Reward final task success, such as passing tests or completing a web task.
+- **Process rewards** — Reward intermediate steps, such as valid tool selection or correct subgoal completion.
+- **Verifier rewards** — Use deterministic checks such as tests, schemas, compilers, assertions, or environment-state validation.
+- **Preference rewards** — Use human or AI preference models where correctness cannot be directly verified.
 
 ## RL for reasoning agents
 
@@ -88,8 +116,15 @@ A curated map of reinforcement learning for agents: systems that learn through i
 
 ## Multi-agent reinforcement learning
 
+This section includes both classical multi-agent reinforcement learning and LLM-based multi-agent orchestration. Classical MARL studies multiple policies learning through shared environment dynamics; LLM multi-agent systems often begin as role-based orchestration, but become RL-relevant when agents are trained, selected, routed, rewarded, or evaluated through interaction traces and population-level feedback.
+
 - **[Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://arxiv.org/abs/1706.02275)** — **MADDPG**, a standard baseline for continuous multi-agent control (conceptual background for mixed agent teams).
+- **[QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning](https://arxiv.org/abs/1803.11485)** — Foundational cooperative MARL method for learning decentralised policies with centralised value factorisation.
+- **[MAPPO: The Surprising Effectiveness of PPO in Cooperative Multi-Agent Games](https://arxiv.org/abs/2103.01955)** — Strong baseline showing PPO-style methods can be effective in cooperative multi-agent RL.
 - **[Emergent Tool Use From Multi-Agent Autocurricula](https://arxiv.org/abs/1909.07528)** — Environment-driven curriculum and tool-like behaviour from multi-agent **RL** interaction.
+- **[PettingZoo](https://pettingzoo.farama.org/)** — Python library providing standardised multi-agent RL environments and APIs.
+- **[Melting Pot](https://github.com/google-deepmind/meltingpot)** — Multi-agent environment suite for studying social interaction, cooperation, competition, and generalisation.
+- **[OpenSpiel](https://openspiel.readthedocs.io/)** — Framework for reinforcement learning and search in games, including self-play and multi-agent decision-making.
 - **[MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework](https://arxiv.org/abs/2308.00352)** — Role-specialised agents for software tasks (orchestration; often combined with feedback and eval loops).
 - **[microsoft/autogen](https://github.com/microsoft/autogen)** — Multi-agent orchestration with hooks for human and model feedback (often used adjacent to RL eval loops and population-style training).
 
@@ -98,6 +133,13 @@ A curated map of reinforcement learning for agents: systems that learn through i
 - **[Video PreTraining (VPT): Learning to Act by Watching Unlabeled Online Videos](https://arxiv.org/abs/2206.11795)** — Behavioural cloning plus **RL** fine-tuning for Minecraft-style agents from large video corpora.
 - **[MineDojo: Building Open-Ended Embodied Agents with Internet-Scale Knowledge](https://arxiv.org/abs/2206.08853)** — Benchmark and toolkit for open-ended embodied agents in Minecraft-like worlds.
 - **[RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control](https://arxiv.org/abs/2307.15818)** — Co-fine-tuning VLM objectives with robot actions; bridge between web-scale LMs and closed-loop physical control.
+- **[Open X-Embodiment / RT-X](https://arxiv.org/abs/2310.08864)** — Large-scale cross-embodiment robot learning effort for generalist robot policies trained across diverse robots and tasks.
+- **[RoboCat: A Self-Improving Generalist Agent for Robotic Manipulation](https://arxiv.org/abs/2306.11706)** — Self-improving robotic agent that learns across tasks and embodiments through demonstration, data collection, and iterative policy improvement.
+- **[Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](https://arxiv.org/abs/2303.04137)** — Visuomotor policy-learning approach using diffusion models for robot action generation.
+- **[RoboMimic](https://github.com/ARISE-Initiative/robomimic)** — Framework and benchmark suite for robot imitation learning, useful as a bridge between demonstrations and downstream RL fine-tuning.
+- **[Isaac Lab / Isaac Gym](https://github.com/isaac-sim/IsaacLab)** — Simulation infrastructure for scalable robot reinforcement learning, imitation learning, and sim-to-real experimentation.
+- **[RLinf-Co: Reinforcement Learning-Based Sim-Real Co-Training for VLA Models](https://arxiv.org/abs/2602.12628)** — Sim-real co-training approach that warm-starts VLA policies with demonstrations and improves them through RL in simulation.
+- **[Foundation Models Meet Embodied Agents](https://foundation-models-meet-embodied-agents.github.io/cvpr2026/)** — Workshop resource connecting foundation models, MDP-style robot decision-making, planning, and embodied agents.
 
 ## Training systems and infrastructure
 
