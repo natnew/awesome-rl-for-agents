@@ -147,6 +147,7 @@ This section includes both classical multi-agent reinforcement learning and LLM-
 - **[OpenRLHF/OpenRLHF](https://github.com/OpenRLHF/OpenRLHF)** — Distributed RLHF stack with Ray and Hugging Face models.
 - **[huggingface/trl](https://github.com/huggingface/trl)** — **TRL**: trainers for SFT, DPO, PPO, reward modelling, and related objectives in the HF ecosystem.
 - **[OpenPipe/ART](https://github.com/OpenPipe/ART)** — Agent reinforcement trainer focused on multi-turn tool use and traced rollouts.
+- **[OpenReward](https://www.gr.inc/releases/introducing-openreward)** — Open platform for serving RL environments as API endpoints for agent training and evaluation, built around the Open Reward Standard.
 
 ## Evaluation, safety and governance
 
