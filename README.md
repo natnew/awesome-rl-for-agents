@@ -45,11 +45,11 @@ A curated map of reinforcement learning for agents: systems that learn through i
 - **[WorkArena: How Capable Are Web Agents at Solving Common Knowledge Work Tasks?](https://arxiv.org/abs/2403.07718)** — Enterprise web-agent benchmark built around common knowledge-worker workflows in browser-based software.
 - **[VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks](https://arxiv.org/abs/2401.13649)** — Multimodal web-agent benchmark focused on visually grounded tasks in realistic web environments.
 - **[WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents](https://arxiv.org/abs/2207.01206)** — Simulated e-commerce shopping from language goals.
-- **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.12941)** — Repository-scale software engineering tasks grounded in real issues and patches.
+- **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** — Repository-scale software engineering tasks grounded in real GitHub issues and corresponding pull requests.
 - **[SWE-Gym: Training Software Engineering Agents and Verifiers](https://arxiv.org/abs/2412.21139)** — Environment for training software engineering agents with real Python repositories, executable runtimes, unit tests, and natural-language issue specifications.
 - **[OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments](https://arxiv.org/abs/2404.07972)** — GUI-level OS interaction across real applications.
 - **[τ-bench](https://github.com/sierra-research/tau-bench)** — Customer-service-style domains with APIs, policies, and simulated users for tool-agent-user evaluation.
-- **[ToolBench: Facilitating Large Language Models to Master 16000+ Real-world APIs](https://arxiv.org/abs/2305.00447)** — Tool-use corpus and execution-aware training and evaluation.
+- **[ToolLLM / ToolBench: Facilitating Large Language Models to Master 16000+ Real-world APIs](https://arxiv.org/abs/2307.16789)** — Tool-use framework and instruction-tuning dataset for API-using agents, with training and evaluation components.
 - **[AgentBench: Evaluating LLMs as Agents](https://arxiv.org/abs/2308.03688)** — Multi-environment suite spanning OS, databases, knowledge graphs, and digital card games.
 - **[AgentGym: Evolving Large Language Model-based Agents Across Diverse Environments](https://arxiv.org/abs/2406.04151)** — Framework for training and evaluating LLM agents across diverse interactive environments, trajectory data, and scalable self-evolution.
 - **[AgentGym-RL: Training LLM Agents for Long-Horizon Decision Making through Multi-Turn Reinforcement Learning](https://arxiv.org/abs/2509.08755)** — RL framework for multi-turn interactive agents across real-world scenarios, with emphasis on long-horizon exploration and stability.
@@ -72,7 +72,7 @@ Trajectory learning is central to RL for agents because the unit of improvement 
 
 ## Tool-use and API-agent RL
 
-- **[Tool Learning with Foundation Models](https://arxiv.org/abs/2402.17153)** — Survey connecting tool acquisition, mastering, and creativity to foundation-model agents acting through APIs and tools.
+- **[Tool Learning with Foundation Models](https://arxiv.org/abs/2304.08354)** — Survey connecting tool-augmented reasoning, tool selection, training, and generalisation for foundation-model agents.
 - **[CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning](https://arxiv.org/abs/2207.01780)** — RL fine-tuning with compiler and execution feedback as the environment signal over program rollouts.
 - **[R1-Code-Interpreter: LLMs Reason with Code via Supervised and Multi-stage Reinforcement Learning](https://arxiv.org/abs/2505.21668)** — Multi-turn Code Interpreter interaction with curriculum **GRPO** across diverse tasks; bridges tool loops and training infrastructure.
 - **[RLTR: Reinforcement Learning with Tool-use Rewards](https://arxiv.org/abs/2508.19598)** — RL framework for LLM agent planning that rewards tool-use completeness across multi-step tool invocation sequences.
@@ -104,13 +104,13 @@ SWE-Gym also belongs here conceptually: its executable runtimes and unit tests t
 
 ## RLHF, RLAIF and preference optimisation for agent backbones
 
-- **[Trends in Alignment of Large Language Models: A Survey](https://arxiv.org/abs/2312.10586)** — Overview of preference learning, RLHF-family methods, and evaluation—methods that often initialise or regularise policies later deployed as agents.
+- **[Reinforcement Learning for LLM Post-Training: A Survey](https://arxiv.org/abs/2407.16216)** — Overview of RLHF, RLVR, PPO, GRPO, DPO, and related post-training methods that often initialise or regularise policies later deployed as agents.
 - **[Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)** — InstructGPT-style supervised fine-tuning plus **RLHF** with a learned reward model.
 - **[Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073)** — **RLAIF**-style training using model-generated critiques and preference labels.
 - **[Direct Preference Optimization: Your Language Model is Secretly a Reward Model](https://arxiv.org/abs/2305.18290)** — **DPO**: single-stage preference optimisation without an explicit reward model rollout loop.
 - **[ORPO: Monolithic Preference Optimization without Reference Model](https://arxiv.org/abs/2403.07691)** — Odds-ratio preference optimisation combined with SFT-style objectives.
 - **[Model Alignment as Prospect Theoretic Optimization](https://arxiv.org/abs/2402.01306)** — **KTO** alignment from binary favourable-or-not labels.
-- **[Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback](https://arxiv.org/abs/2307.12966)** — Failure modes in preference modelling and reward misspecification when human or AI feedback defines the optimisation target.
+- **[Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback](https://arxiv.org/abs/2307.15217)** — Survey of RLHF limitations, open problems, complementary techniques, and oversight standards for feedback-trained systems.
 - **[Self-Rewarding Language Models](https://arxiv.org/abs/2401.10020)** — Iterative self-preference and policy improvement using the model as its own preference source—relevant when reward models are co-trained with the agent policy.
 - **[RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback](https://arxiv.org/abs/2309.00267)** — Compares human versus AI feedback for preference-model training at scale.
 
@@ -150,9 +150,9 @@ This section includes both classical multi-agent reinforcement learning and LLM-
 
 ## Evaluation, safety and governance
 
-- **[Who Validates the Validators? Aligning LLM-Assisted Evaluation of LLM Outputs with Human Preferences](https://arxiv.org/abs/2404.12272)** — When LLM-as-judge metrics drift from human judgments—critical for closed-loop agent evaluation.
+- **[Who Validates the Validators? Aligning LLM-Assisted Evaluation of LLM Outputs with Human Preferences](https://arxiv.org/abs/2404.12272)** — Mixed-initiative approach for aligning LLM-generated evaluators with human requirements, including criteria drift in evaluation design.
 - **[Reinforcement Learning with a Corrupted Reward Channel](https://arxiv.org/abs/1705.08417)** — Formalises corrupt reward channels (misspecification, sensing errors) and mitigation angles relevant to learned reward models in deployed agents.
-- **[The Alignment Problem from a Deep Learning Perspective](https://arxiv.org/abs/1908.04742)** — Risk factors as capabilities scale, including reward specification and oversight.
+- **[The Alignment Problem from a Deep Learning Perspective](https://arxiv.org/abs/2209.00626)** — Position paper on misaligned goals, deceptive reward-seeking, and power-seeking risks as deep learning systems scale.
 - **[Concrete Problems in AI Safety](https://arxiv.org/abs/1606.06565)** — Early articulation of specification, robustness, and monitoring issues relevant to agent training loops.
 
 ## Related awesome lists
