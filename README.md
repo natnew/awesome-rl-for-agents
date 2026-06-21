@@ -4,41 +4,67 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)<br>
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Links](https://github.com/natnew/awesome-rl-for-agents/actions/workflows/links.yml/badge.svg)](https://github.com/natnew/awesome-rl-for-agents/actions/workflows/links.yml)
 [![Topic: reinforcement-learning](https://img.shields.io/badge/topic-reinforcement--learning-8A2BE2?labelColor=1f2937)](https://github.com/topics/reinforcement-learning)
 [![Topic: llm-agents](https://img.shields.io/badge/topic-llm--agents-5865F2?labelColor=1f2937)](https://github.com/topics/llm-agents)
 [![Topic: multi-agent-systems](https://img.shields.io/badge/topic-multi--agent--systems-1e40af?labelColor=1f2937)](https://github.com/topics/multi-agent-systems)
 
 A curated map of reinforcement learning for agents: systems that learn through interaction with environments, tools, APIs, users, other agents or the physical world. The list covers agent environments, rollouts, credit assignment, reward design, tool-use learning, multi-agent RL, embodied agents and the LLM post-training methods that increasingly power agentic behaviour.
 
-**RL for agents** here means optimising behaviour through a loop: the agent observes state, chooses an action (tool call, API request, message to a user or another agent, or a physical control), the environment transitions, a reward or verification signal is returned, and trajectories update the policy. That is broader than **RL for LLM behaviour alone** (instruction following, preference alignment, and trace-only updates without an environment-mediated transition)—but those methods increasingly train the **backbones** of tool-using and embodied agents, so they appear as their own slice below.
+It currently indexes <!--entry-count-->85<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
+
+> **RL for agents** here means optimising behaviour through a loop: the agent observes state, chooses an action (tool call, API request, message to a user or another agent, or a physical control), the environment transitions, a reward or verification signal is returned, and trajectories update the policy. That is broader than **RL for LLM behaviour alone** (instruction following, preference alignment, and trace-only updates without an environment-mediated transition)—but those methods increasingly train the **backbones** of tool-using and embodied agents, so they appear as their own slice below.
+
+**How this list is organised.** **Core** sections cover the RL-for-agents training and evaluation loop directly — environments, trajectories, datasets, rewards, tool-use, and the infrastructure that runs them. **Adjacent & background** sections cover foundations and neighbouring fields (classical MARL, robotics, generic preference optimisation) that train or inform agent policies without being agent-RL-specific. New to the area? Start with [Surveys & reading paths](#surveys--reading-paths).
 
 
 ## Contents
 
-- [Foundations: RL, agents and interaction loops](#foundations-rl-agents-and-interaction-loops)
-- [Agent environments and task worlds](#agent-environments-and-task-worlds)
+**On-ramp**
+- [Surveys & reading paths](#surveys--reading-paths)
+
+**Core — the RL-for-agents loop**
+- [Environments & Benchmarks](#environments--benchmarks)
 - [Rollouts, trajectories and credit assignment](#rollouts-trajectories-and-credit-assignment)
+- [Datasets & trajectory corpora](#datasets--trajectory-corpora)
+- [Verifiable Rewards & Reward Design](#verifiable-rewards--reward-design)
 - [Tool-use and API-agent RL](#tool-use-and-api-agent-rl)
-- [Verifiable rewards and reward engineering](#verifiable-rewards-and-reward-engineering)
+- [Training systems and infrastructure](#training-systems-and-infrastructure)
+
+**Adjacent & background**
+- [Foundations: RL, agents and interaction loops](#foundations-rl-agents-and-interaction-loops)
 - [RL for reasoning agents](#rl-for-reasoning-agents)
 - [RLHF, RLAIF and preference optimisation for agent backbones](#rlhf-rlaif-and-preference-optimisation-for-agent-backbones)
 - [Multi-agent reinforcement learning](#multi-agent-reinforcement-learning)
 - [Embodied and physical agents](#embodied-and-physical-agents)
-- [Training systems and infrastructure](#training-systems-and-infrastructure)
-- [Evaluation, safety and governance](#evaluation-safety-and-governance)
+- [Evaluation, safety and control](#evaluation-safety-and-control)
+
+**Reading & related**
 - [Related awesome lists](#related-awesome-lists)
-- [More from natnew](#more-from-natnew)
-- [Other curated lists](#other-curated-lists)
+  - [More from natnew](#more-from-natnew)
+  - [Other curated lists](#other-curated-lists)
 
 ---
 
-## Foundations: RL, agents and interaction loops
+## Surveys & reading paths
 
-- **[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)** — Taxonomy of planning, memory, tool use, and multi-agent behaviour, grounded in agents as systems that act over time under partial observability.
-- **[Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)** — **PPO**, a widely used on-policy update for policies that emit discrete tool or dialogue actions in agent trainers.
-- **[Trust Region Policy Optimization](https://arxiv.org/abs/1502.05477)** — **TRPO**, constrained policy updates that underpin many stable large-scale agent fine-tuning pipelines.
+New to RL for agents, or mapping the field? This is a suggested path through the list rather than a separate pile of links — each step points to a Core or Adjacent section.
 
-## Agent environments and task worlds
+1. **Frame the loop.** Read the intro above, then [Foundations: RL, agents and interaction loops](#foundations-rl-agents-and-interaction-loops) for the policy-optimisation primitives (PPO, TRPO) and an agents survey.
+2. **See where agents act.** Browse [Environments & Benchmarks](#environments--benchmarks) to understand the task worlds that produce reward signals.
+3. **Understand the unit of learning.** [Rollouts, trajectories and credit assignment](#rollouts-trajectories-and-credit-assignment) explains why the interaction trace, not a single answer, is what improves — and the [Datasets & trajectory corpora](#datasets--trajectory-corpora) that feed it.
+4. **Design the reward.** [Verifiable Rewards & Reward Design](#verifiable-rewards--reward-design), including the [reward signal types](#reward-signal-types) summary.
+5. **Apply it to tools and reasoning.** [Tool-use and API-agent RL](#tool-use-and-api-agent-rl) and [RL for reasoning agents](#rl-for-reasoning-agents).
+6. **Know the backbones.** [RLHF, RLAIF and preference optimisation for agent backbones](#rlhf-rlaif-and-preference-optimisation-for-agent-backbones) covers the post-training methods that initialise agent policies.
+7. **Scale it.** [Training systems and infrastructure](#training-systems-and-infrastructure) for the trainers and rollout services that run all of the above.
+
+Section-level surveys worth reading first: the agents survey and post-training survey in Foundations and RLHF, the tool-learning survey in Tool-use, and the multi-step reasoning survey in RL for reasoning agents.
+
+---
+
+**Core — the RL-for-agents loop.** Environments, trajectories, datasets, rewards, tool-use, and the infrastructure that runs them.
+
+## Environments & Benchmarks
 
 - **[WebArena: A Realistic Web Environment for Building Autonomous Agents](https://arxiv.org/abs/2307.13854)** — Multi-site autonomous web navigation with reproducible infrastructure.
 - **[BrowserGym](https://github.com/ServiceNow/BrowserGym)** — Open Gym-style framework for designing, testing, and evaluating browser agents across web task environments.
@@ -61,8 +87,6 @@ A curated map of reinforcement learning for agents: systems that learn through i
 
 ## Rollouts, trajectories and credit assignment
 
-Trajectory learning is central to RL for agents because the unit of improvement is often not a single answer, but an interaction trace: observations, tool calls, intermediate failures, retries, state transitions, and final outcomes. This makes credit assignment harder than in single-turn preference optimisation, but also makes agent learning much closer to real deployment behaviour.
-
 - **[Decision Transformer: Reinforcement Learning via Sequence Modeling](https://arxiv.org/abs/2106.01345)** — Offline control as conditional trajectory modelling; useful when credit is assigned at the sequence level rather than per atomic environment step.
 - **[ReST^EM: Reinforcement Learning with Self-Training for Language Modeling](https://arxiv.org/abs/2308.08998)** — Iterative grow-and-filter self-training from model rollouts, treating sampled trajectories as data for policy improvement.
 - **[AgentGym Trajectories](https://github.com/WooooDyy/AgentGym)** — Trajectory data for equipping LLM agents with prior interactive capabilities before or during environment-driven improvement.
@@ -70,18 +94,15 @@ Trajectory learning is central to RL for agents because the unit of improvement 
 - **[ProRL Agent: Rollout-as-a-Service for RL Training of Multi-Turn LLM Agents](https://arxiv.org/abs/2603.18815)** — Scalable rollout infrastructure for sandboxed trajectory collection and RL training across software engineering, coding, math, and STEM tasks.
 - **[Agent Lightning: Train ANY AI Agents with Reinforcement Learning](https://arxiv.org/abs/2508.03680)** — Framework for adding reinforcement learning to existing agents by decoupling agent execution from RL training.
 
-## Tool-use and API-agent RL
+## Datasets & trajectory corpora
 
-- **[Tool Learning with Foundation Models](https://arxiv.org/abs/2304.08354)** — Survey connecting tool-augmented reasoning, tool selection, training, and generalisation for foundation-model agents.
-- **[CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning](https://arxiv.org/abs/2207.01780)** — RL fine-tuning with compiler and execution feedback as the environment signal over program rollouts.
-- **[R1-Code-Interpreter: LLMs Reason with Code via Supervised and Multi-stage Reinforcement Learning](https://arxiv.org/abs/2505.21668)** — Multi-turn Code Interpreter interaction with curriculum **GRPO** across diverse tasks; bridges tool loops and training infrastructure.
-- **[RLTR: Reinforcement Learning with Tool-use Rewards](https://arxiv.org/abs/2508.19598)** — RL framework for LLM agent planning that rewards tool-use completeness across multi-step tool invocation sequences.
-- **[Tool-R1: Sample-Efficient Reinforcement Learning for Agentic Tool Use](https://arxiv.org/abs/2509.12867)** — RL framework for compositional, multi-step tool use through executable code generation.
-- **[ARTIST: Agentic Reasoning and Tool Integration for LLMs via Reinforcement Learning](https://arxiv.org/abs/2505.01441)** — Training approach that makes tool invocation and environment interaction first-class operations for agentic LLMs.
+Datasets of interaction traces, demonstrations, and preference labels that supply offline data for behavioural cloning, reward modelling, or warm-starting RL. See also [AgentGym Trajectories](#rollouts-trajectories-and-credit-assignment) and the [ToolBench](#environments--benchmarks) instruction-tuning dataset.
 
-See also **[OpenPipe/ART](#training-systems-and-infrastructure)** for multi-turn tool-use agents, traced rollouts, and task-specific rewards.
+- **[Mind2Web: Towards a Generalist Agent for the Web](https://arxiv.org/abs/2306.06070)** — Dataset of real-website tasks and action trajectories for training and evaluating generalist web agents.
+- **[Android in the Wild: A Large-Scale Dataset for Android Device Control](https://arxiv.org/abs/2307.10088)** — Large device-control corpus of human demonstrations across Android apps, for grounding GUI-agent policies.
+- **[UltraFeedback: Boosting Language Models with Scaled AI Feedback](https://arxiv.org/abs/2310.01377)** — Scaled AI-feedback preference dataset widely used to train reward models and preference-optimised agent backbones.
 
-## Verifiable rewards and reward engineering
+## Verifiable Rewards & Reward Design
 
 - **[Let’s Verify Step by Step](https://arxiv.org/abs/2305.20050)** — **Process supervision** with outcome and step-level signals—central when rewards come from verifiable intermediate structure, not only final outcomes.
 - **[PrimeIntellect-ai/verifiers](https://github.com/PrimeIntellect-ai/verifiers)** — Environments expressed as **Python `assert`s** for training and evaluating LMs with **RL**, emphasising automatically checkable rewards.
@@ -97,10 +118,42 @@ SWE-Gym also belongs here conceptually: its executable runtimes and unit tests t
 - **Verifier rewards** — Use deterministic checks such as tests, schemas, compilers, assertions, or environment-state validation.
 - **Preference rewards** — Use human or AI preference models where correctness cannot be directly verified.
 
+## Tool-use and API-agent RL
+
+- **[Tool Learning with Foundation Models](https://arxiv.org/abs/2304.08354)** — Survey connecting tool-augmented reasoning, tool selection, training, and generalisation for foundation-model agents.
+- **[CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning](https://arxiv.org/abs/2207.01780)** — RL fine-tuning with compiler and execution feedback as the environment signal over program rollouts.
+- **[R1-Code-Interpreter: LLMs Reason with Code via Supervised and Multi-stage Reinforcement Learning](https://arxiv.org/abs/2505.21668)** — Multi-turn Code Interpreter interaction with curriculum **GRPO** across diverse tasks; bridges tool loops and training infrastructure.
+- **[RLTR: Reinforcement Learning with Tool-use Rewards](https://arxiv.org/abs/2508.19598)** — RL framework for LLM agent planning that rewards tool-use completeness across multi-step tool invocation sequences.
+- **[Tool-R1: Sample-Efficient Reinforcement Learning for Agentic Tool Use](https://arxiv.org/abs/2509.12867)** — RL framework for compositional, multi-step tool use through executable code generation.
+- **[ARTIST: Agentic Reasoning and Tool Integration for LLMs via Reinforcement Learning](https://arxiv.org/abs/2505.01441)** — Training approach that makes tool invocation and environment interaction first-class operations for agentic LLMs.
+
+See also **[OpenPipe/ART](#training-systems-and-infrastructure)** for multi-turn tool-use agents, traced rollouts, and task-specific rewards.
+
+## Training systems and infrastructure
+
+- **[volcengine/verl](https://github.com/volcengine/verl)** — **veRL**: performant RL trainer for LLMs (PPO, GRPO, etc.) aimed at large GPU clusters.
+- **[OpenRLHF/OpenRLHF](https://github.com/OpenRLHF/OpenRLHF)** — Distributed RLHF stack with Ray and Hugging Face models.
+- **[huggingface/trl](https://github.com/huggingface/trl)** — **TRL**: trainers for SFT, DPO, PPO, reward modelling, and related objectives in the HF ecosystem.
+- **[OpenPipe/ART](https://github.com/OpenPipe/ART)** — Agent reinforcement trainer focused on multi-turn tool use and traced rollouts.
+- **[OpenReward](https://www.gr.inc/releases/introducing-openreward)** — Open platform for serving RL environments as API endpoints for agent training and evaluation, built around the Open Reward Standard.
+
+---
+
+**Adjacent & background.** Foundations and neighbouring fields that train or inform agent policies without being agent-RL-specific. Kept for completeness.
+
+## Foundations: RL, agents and interaction loops
+
+- **[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)** — Taxonomy of planning, memory, tool use, and multi-agent behaviour, grounded in agents as systems that act over time under partial observability.
+- **[Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)** — **PPO**, a widely used on-policy update for policies that emit discrete tool or dialogue actions in agent trainers.
+- **[Trust Region Policy Optimization](https://arxiv.org/abs/1502.05477)** — **TRPO**, constrained policy updates that underpin many stable large-scale agent fine-tuning pipelines.
+
 ## RL for reasoning agents
 
 - **[Multi-Step Reasoning with Large Language Models, a Survey](https://arxiv.org/abs/2407.11511)** — Taxonomy of generating, evaluating, and controlling multi-step reasoning, including tool execution and RL-style fine-tuning hooks.
 - **[DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](https://arxiv.org/abs/2402.03300)** — Introduces **GRPO** (group relative policy optimisation) for efficient RL on reasoning traces; pairs naturally with agent trainers in [Training systems and infrastructure](#training-systems-and-infrastructure).
+- **[DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](https://arxiv.org/abs/2501.12948)** — Large-scale RL (including a cold-start-free variant) that elicits long-horizon reasoning, using verifiable rewards on math and code.
+- **[Kimi k1.5: Scaling Reinforcement Learning with LLMs](https://arxiv.org/abs/2501.12599)** — RL recipe scaling long-context reasoning with policy optimisation and length control over reasoning rollouts.
+- **[STaR: Bootstrapping Reasoning With Reasoning](https://arxiv.org/abs/2203.14465)** — Self-taught reasoner that filters and reuses model-generated rationales as training data; an early grow-and-filter precursor to RL on reasoning traces.
 
 ## RLHF, RLAIF and preference optimisation for agent backbones
 
@@ -115,8 +168,6 @@ SWE-Gym also belongs here conceptually: its executable runtimes and unit tests t
 - **[RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback](https://arxiv.org/abs/2309.00267)** — Compares human versus AI feedback for preference-model training at scale.
 
 ## Multi-agent reinforcement learning
-
-This section includes both classical multi-agent reinforcement learning and LLM-based multi-agent orchestration. Classical MARL studies multiple policies learning through shared environment dynamics; LLM multi-agent systems often begin as role-based orchestration, but become RL-relevant when agents are trained, selected, routed, rewarded, or evaluated through interaction traces and population-level feedback.
 
 - **[Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://arxiv.org/abs/1706.02275)** — **MADDPG**, a standard baseline for continuous multi-agent control (conceptual background for mixed agent teams).
 - **[QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning](https://arxiv.org/abs/1803.11485)** — Foundational cooperative MARL method for learning decentralised policies with centralised value factorisation.
@@ -141,20 +192,17 @@ This section includes both classical multi-agent reinforcement learning and LLM-
 - **[RLinf-Co: Reinforcement Learning-Based Sim-Real Co-Training for VLA Models](https://arxiv.org/abs/2602.12628)** — Sim-real co-training approach that warm-starts VLA policies with demonstrations and improves them through RL in simulation.
 - **[Foundation Models Meet Embodied Agents](https://foundation-models-meet-embodied-agents.github.io/cvpr2026/)** — Workshop resource connecting foundation models, MDP-style robot decision-making, planning, and embodied agents.
 
-## Training systems and infrastructure
-
-- **[volcengine/verl](https://github.com/volcengine/verl)** — **veRL**: performant RL trainer for LLMs (PPO, GRPO, etc.) aimed at large GPU clusters.
-- **[OpenRLHF/OpenRLHF](https://github.com/OpenRLHF/OpenRLHF)** — Distributed RLHF stack with Ray and Hugging Face models.
-- **[huggingface/trl](https://github.com/huggingface/trl)** — **TRL**: trainers for SFT, DPO, PPO, reward modelling, and related objectives in the HF ecosystem.
-- **[OpenPipe/ART](https://github.com/OpenPipe/ART)** — Agent reinforcement trainer focused on multi-turn tool use and traced rollouts.
-- **[OpenReward](https://www.gr.inc/releases/introducing-openreward)** — Open platform for serving RL environments as API endpoints for agent training and evaluation, built around the Open Reward Standard.
-
-## Evaluation, safety and governance
+## Evaluation, safety and control
 
 - **[Who Validates the Validators? Aligning LLM-Assisted Evaluation of LLM Outputs with Human Preferences](https://arxiv.org/abs/2404.12272)** — Mixed-initiative approach for aligning LLM-generated evaluators with human requirements, including criteria drift in evaluation design.
+- **[Holistic Evaluation of Language Models (HELM)](https://arxiv.org/abs/2211.09110)** — Multi-metric, multi-scenario evaluation framework; a reference point for designing broad, comparable agent evaluation suites.
+- **[AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents](https://arxiv.org/abs/2410.09024)** — Benchmark of explicitly malicious agent tasks for measuring robustness to misuse in tool-using agents.
 - **[Reinforcement Learning with a Corrupted Reward Channel](https://arxiv.org/abs/1705.08417)** — Formalises corrupt reward channels (misspecification, sensing errors) and mitigation angles relevant to learned reward models in deployed agents.
+- **[Goal Misgeneralization in Deep Reinforcement Learning](https://arxiv.org/abs/2105.14111)** — Shows agents can retain capabilities while pursuing the wrong objective off-distribution; directly relevant to reward and environment design for agents.
 - **[The Alignment Problem from a Deep Learning Perspective](https://arxiv.org/abs/2209.00626)** — Position paper on misaligned goals, deceptive reward-seeking, and power-seeking risks as deep learning systems scale.
 - **[Concrete Problems in AI Safety](https://arxiv.org/abs/1606.06565)** — Early articulation of specification, robustness, and monitoring issues relevant to agent training loops.
+
+---
 
 ## Related awesome lists
 
@@ -201,5 +249,5 @@ Jump in and join the community — PRs of every size are welcome.
 </p>
 
 <p align="center">
-📝 <a href="CONTRIBUTING.md">Read the contributing guide</a>  ·  🐛 <a href="https://github.com/natnew/Awesome-Reinforcement-Learning-for-Agents/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">good first issues</a>
+📝 <a href="CONTRIBUTING.md">Read the contributing guide</a>  ·  🐛 <a href="https://github.com/natnew/awesome-rl-for-agents/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">good first issues</a>
 </p>

@@ -1,0 +1,71 @@
+name: Add a resource
+description: Suggest a paper, benchmark, environment, or tool for the list.
+title: "[Resource]: <title or project name>"
+labels: ["new resource"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a resource. Please check it is not already listed and that it fits
+        the scope described in [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md).
+  - type: input
+    id: title
+    attributes:
+      label: Title or project name
+      placeholder: e.g. τ-bench
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Canonical URL
+      description: arXiv `/abs/` page, ACL Anthology, official project page, or canonical GitHub repository. No shortened or referral links.
+      placeholder: https://arxiv.org/abs/...
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Proposed section
+      description: Pick the most specific existing section. If none fits, use the "Suggest a new section" template instead.
+      options:
+        - Environments & Benchmarks
+        - Rollouts, trajectories and credit assignment
+        - Datasets & trajectory corpora
+        - Verifiable Rewards & Reward Design
+        - Tool-use and API-agent RL
+        - Training systems and infrastructure
+        - "Foundations: RL, agents and interaction loops"
+        - RL for reasoning agents
+        - RLHF, RLAIF and preference optimisation for agent backbones
+        - Multi-agent reinforcement learning
+        - Embodied and physical agents
+        - Evaluation, safety and control
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: One-line description
+      description: One neutral, factual sentence — what the resource is, not marketing.
+      placeholder: One concise sentence describing the contribution.
+    validations:
+      required: true
+  - type: textarea
+    id: relevance
+    attributes:
+      label: Why it fits the scope
+      description: Name the RL signal or interaction loop it concerns (environment, reward, trajectory, tool-use, multi-agent, embodied policy learning).
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: The link resolves and is the canonical source.
+          required: true
+        - label: This resource is not already in the list.
+          required: true
+        - label: It is directly relevant to reinforcement learning for agents.
+          required: true

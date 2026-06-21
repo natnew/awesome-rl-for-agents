@@ -1,0 +1,30 @@
+name: Suggest a new section
+description: Propose a new taxonomy section before a large reorganisation.
+title: "[Taxonomy]: <proposed section>"
+labels: ["taxonomy"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Open this before submitting a PR that adds a new section, as noted in
+        [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md).
+  - type: input
+    id: name
+    attributes:
+      label: Proposed section name
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why a new section is needed
+      description: What it covers, why existing sections do not fit, and how it relates to the RL-for-agents scope.
+    validations:
+      required: true
+  - type: textarea
+    id: candidates
+    attributes:
+      label: Candidate entries
+      description: A few resources that would populate the section, with canonical URLs.
+    validations:
+      required: true

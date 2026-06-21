@@ -27,19 +27,29 @@ Avoid:
 
 1. **Placement**: Add the item under the most specific existing section in [README.md](README.md). If nothing fits, open an issue to discuss a new section before large reorganizations.
 
-   README taxonomy (pick one primary section per item):
+   README taxonomy (pick one primary section per item). **Core** sections cover the RL-for-agents loop directly; **Adjacent & background** sections cover foundations and neighbouring fields.
+
+   Core:
+
+   - Environments & Benchmarks
+   - Rollouts, trajectories and credit assignment
+   - Datasets & trajectory corpora
+   - Verifiable Rewards & Reward Design
+   - Tool-use and API-agent RL
+   - Training systems and infrastructure
+
+   Adjacent & background:
 
    - Foundations: RL, agents and interaction loops
-   - Agent environments and task worlds
-   - Rollouts, trajectories and credit assignment
-   - Tool-use and API-agent RL
-   - Verifiable rewards and reward engineering
    - RL for reasoning agents
    - RLHF, RLAIF and preference optimisation for agent backbones
    - Multi-agent reinforcement learning
    - Embodied and physical agents
-   - Training systems and infrastructure
-   - Evaluation, safety and governance
+   - Evaluation, safety and control
+
+   On-ramp:
+
+   - Surveys & reading paths (a reading path through the list; prefer placing the resource itself in a Core or Adjacent section)
 2. **Markdown style**: Use a single bullet in this form:
 
    ```markdown
@@ -56,21 +66,3 @@ If you find a broken link, PRs that **update** the URL or **remove** an irrecove
 ## Maintainer discretion
 
 Maintainers may decline additions that are off-scope, redundant, or insufficiently documented, or may edit wording for consistency.
-
----
-
-## Repository metadata checklist (after you create the GitHub repo)
-
-Copy these into the GitHub repository **About** settings when you publish:
-
-| Field | Suggested value |
-|-------|-----------------|
-| **Description** | Curated papers, benchmarks, and tools for reinforcement learning in LLM, tool-use, multi-agent, and embodied agents. |
-| **Website** | (optional) Link to a project page if you add one later. |
-| **Topics** | `reinforcement-learning`, `llm-agents`, `tool-use`, `multi-agent-systems`, `rlhf`, `benchmarks`, `awesome-list`, `machine-learning`, `large-language-models` |
-
-**Features:** Enable **Issues** if you want community suggestions; disable **Wiki** unless you plan to maintain it.
-
-### Optional: Awesome list compliance
-
-If you intend to submit this list to [sindresorhus/awesome](https://github.com/sindresorhus/awesome), read their [pull request requirements](https://github.com/sindresorhus/awesome/blob/main/pull_request_template.md) first. The README includes the [Awesome](https://awesome.re) badge; remove or retain it according to whether you meet their criteria at submission time.

@@ -1,0 +1,600 @@
+{
+  "count": 85,
+  "resources": [
+    {
+      "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+      "url": "https://arxiv.org/abs/2307.13854",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Multi-site autonomous web navigation with reproducible infrastructure."
+    },
+    {
+      "title": "BrowserGym",
+      "url": "https://github.com/ServiceNow/BrowserGym",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Open Gym-style framework for designing, testing, and evaluating browser agents across web task environments."
+    },
+    {
+      "title": "WorkArena: How Capable Are Web Agents at Solving Common Knowledge Work Tasks?",
+      "url": "https://arxiv.org/abs/2403.07718",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Enterprise web-agent benchmark built around common knowledge-worker workflows in browser-based software."
+    },
+    {
+      "title": "VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks",
+      "url": "https://arxiv.org/abs/2401.13649",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Multimodal web-agent benchmark focused on visually grounded tasks in realistic web environments."
+    },
+    {
+      "title": "WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents",
+      "url": "https://arxiv.org/abs/2207.01206",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Simulated e-commerce shopping from language goals."
+    },
+    {
+      "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+      "url": "https://arxiv.org/abs/2310.06770",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Repository-scale software engineering tasks grounded in real GitHub issues and corresponding pull requests."
+    },
+    {
+      "title": "SWE-Gym: Training Software Engineering Agents and Verifiers",
+      "url": "https://arxiv.org/abs/2412.21139",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Environment for training software engineering agents with real Python repositories, executable runtimes, unit tests, and natural-language issue specifications."
+    },
+    {
+      "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments",
+      "url": "https://arxiv.org/abs/2404.07972",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "GUI-level OS interaction across real applications."
+    },
+    {
+      "title": "τ-bench",
+      "url": "https://github.com/sierra-research/tau-bench",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Customer-service-style domains with APIs, policies, and simulated users for tool-agent-user evaluation."
+    },
+    {
+      "title": "ToolLLM / ToolBench: Facilitating Large Language Models to Master 16000+ Real-world APIs",
+      "url": "https://arxiv.org/abs/2307.16789",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Tool-use framework and instruction-tuning dataset for API-using agents, with training and evaluation components."
+    },
+    {
+      "title": "AgentBench: Evaluating LLMs as Agents",
+      "url": "https://arxiv.org/abs/2308.03688",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Multi-environment suite spanning OS, databases, knowledge graphs, and digital card games."
+    },
+    {
+      "title": "AgentGym: Evolving Large Language Model-based Agents Across Diverse Environments",
+      "url": "https://arxiv.org/abs/2406.04151",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Framework for training and evaluating LLM agents across diverse interactive environments, trajectory data, and scalable self-evolution."
+    },
+    {
+      "title": "AgentGym-RL: Training LLM Agents for Long-Horizon Decision Making through Multi-Turn Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2509.08755",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "RL framework for multi-turn interactive agents across real-world scenarios, with emphasis on long-horizon exploration and stability."
+    },
+    {
+      "title": "GAIA: A Benchmark for General AI Assistants",
+      "url": "https://arxiv.org/abs/2311.12983",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Multi-step assistant tasks requiring web, tools, and reasoning."
+    },
+    {
+      "title": "AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents",
+      "url": "https://arxiv.org/abs/2407.18901",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Stateful API-level “app world” for coding agents."
+    },
+    {
+      "title": "Berkeley Function Calling Leaderboard (Gorilla)",
+      "url": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Leaderboard and tooling for evaluating function-calling reliability."
+    },
+    {
+      "title": "RL environments guide (Hugging Face Space)",
+      "url": "https://huggingface.co/spaces/AdithyaSK/rl-environments-guide#what-makes-an-rl-environment-for-llms-the-components",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Interactive walkthrough of what makes an **RL environment for LLMs** (components, design, and scaling in the LLM era)."
+    },
+    {
+      "title": "RL for Agents Workshop — Deep Dive on Training Agents with RL and Open Source",
+      "url": "https://www.youtube.com/watch?v=cixmqTsi2A4&list=PLdX2l3YHtVlpS5hoQjeJWo1bsWhdfyhvn&index=48",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Hugging Face YouTube session on training agents with RL and open-source stacks (playlist item)."
+    },
+    {
+      "title": "Decision Transformer: Reinforcement Learning via Sequence Modeling",
+      "url": "https://arxiv.org/abs/2106.01345",
+      "section": "Rollouts, trajectories and credit assignment",
+      "tier": "core",
+      "description": "Offline control as conditional trajectory modelling; useful when credit is assigned at the sequence level rather than per atomic environment step."
+    },
+    {
+      "title": "ReST^EM: Reinforcement Learning with Self-Training for Language Modeling",
+      "url": "https://arxiv.org/abs/2308.08998",
+      "section": "Rollouts, trajectories and credit assignment",
+      "tier": "core",
+      "description": "Iterative grow-and-filter self-training from model rollouts, treating sampled trajectories as data for policy improvement."
+    },
+    {
+      "title": "AgentGym Trajectories",
+      "url": "https://github.com/WooooDyy/AgentGym",
+      "section": "Rollouts, trajectories and credit assignment",
+      "tier": "core",
+      "description": "Trajectory data for equipping LLM agents with prior interactive capabilities before or during environment-driven improvement."
+    },
+    {
+      "title": "AgentGym-RL / ScalingInter-RL",
+      "url": "https://arxiv.org/abs/2509.08755",
+      "section": "Rollouts, trajectories and credit assignment",
+      "tier": "core",
+      "description": "RL framework for long-horizon, multi-turn agent learning with emphasis on stability, exploration, and avoiding behavioural collapse."
+    },
+    {
+      "title": "ProRL Agent: Rollout-as-a-Service for RL Training of Multi-Turn LLM Agents",
+      "url": "https://arxiv.org/abs/2603.18815",
+      "section": "Rollouts, trajectories and credit assignment",
+      "tier": "core",
+      "description": "Scalable rollout infrastructure for sandboxed trajectory collection and RL training across software engineering, coding, math, and STEM tasks."
+    },
+    {
+      "title": "Agent Lightning: Train ANY AI Agents with Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2508.03680",
+      "section": "Rollouts, trajectories and credit assignment",
+      "tier": "core",
+      "description": "Framework for adding reinforcement learning to existing agents by decoupling agent execution from RL training."
+    },
+    {
+      "title": "Mind2Web: Towards a Generalist Agent for the Web",
+      "url": "https://arxiv.org/abs/2306.06070",
+      "section": "Datasets & trajectory corpora",
+      "tier": "core",
+      "description": "Dataset of real-website tasks and action trajectories for training and evaluating generalist web agents."
+    },
+    {
+      "title": "Android in the Wild: A Large-Scale Dataset for Android Device Control",
+      "url": "https://arxiv.org/abs/2307.10088",
+      "section": "Datasets & trajectory corpora",
+      "tier": "core",
+      "description": "Large device-control corpus of human demonstrations across Android apps, for grounding GUI-agent policies."
+    },
+    {
+      "title": "UltraFeedback: Boosting Language Models with Scaled AI Feedback",
+      "url": "https://arxiv.org/abs/2310.01377",
+      "section": "Datasets & trajectory corpora",
+      "tier": "core",
+      "description": "Scaled AI-feedback preference dataset widely used to train reward models and preference-optimised agent backbones."
+    },
+    {
+      "title": "Let’s Verify Step by Step",
+      "url": "https://arxiv.org/abs/2305.20050",
+      "section": "Verifiable Rewards & Reward Design",
+      "tier": "core",
+      "description": "**Process supervision** with outcome and step-level signals—central when rewards come from verifiable intermediate structure, not only final outcomes."
+    },
+    {
+      "title": "PrimeIntellect-ai/verifiers",
+      "url": "https://github.com/PrimeIntellect-ai/verifiers",
+      "section": "Verifiable Rewards & Reward Design",
+      "tier": "core",
+      "description": "Environments expressed as **Python `assert`s** for training and evaluating LMs with **RL**, emphasising automatically checkable rewards."
+    },
+    {
+      "title": "Agent-RLVR: Training Software Engineering Agents via Guidance and Environment Rewards",
+      "url": "https://arxiv.org/abs/2506.11425",
+      "section": "Verifiable Rewards & Reward Design",
+      "tier": "core",
+      "description": "Extends RLVR to agentic software-engineering tasks, where long-horizon, sparse-reward settings make naive verifier rewards difficult."
+    },
+    {
+      "title": "Awesome RLVR",
+      "url": "https://github.com/opendilab/awesome-RLVR",
+      "section": "Verifiable Rewards & Reward Design",
+      "tier": "core",
+      "description": "Curated resources on reinforcement learning with verifiable rewards for math, code, and other automatically checkable domains."
+    },
+    {
+      "title": "Tool Learning with Foundation Models",
+      "url": "https://arxiv.org/abs/2304.08354",
+      "section": "Tool-use and API-agent RL",
+      "tier": "core",
+      "description": "Survey connecting tool-augmented reasoning, tool selection, training, and generalisation for foundation-model agents."
+    },
+    {
+      "title": "CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2207.01780",
+      "section": "Tool-use and API-agent RL",
+      "tier": "core",
+      "description": "RL fine-tuning with compiler and execution feedback as the environment signal over program rollouts."
+    },
+    {
+      "title": "R1-Code-Interpreter: LLMs Reason with Code via Supervised and Multi-stage Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2505.21668",
+      "section": "Tool-use and API-agent RL",
+      "tier": "core",
+      "description": "Multi-turn Code Interpreter interaction with curriculum **GRPO** across diverse tasks; bridges tool loops and training infrastructure."
+    },
+    {
+      "title": "RLTR: Reinforcement Learning with Tool-use Rewards",
+      "url": "https://arxiv.org/abs/2508.19598",
+      "section": "Tool-use and API-agent RL",
+      "tier": "core",
+      "description": "RL framework for LLM agent planning that rewards tool-use completeness across multi-step tool invocation sequences."
+    },
+    {
+      "title": "Tool-R1: Sample-Efficient Reinforcement Learning for Agentic Tool Use",
+      "url": "https://arxiv.org/abs/2509.12867",
+      "section": "Tool-use and API-agent RL",
+      "tier": "core",
+      "description": "RL framework for compositional, multi-step tool use through executable code generation."
+    },
+    {
+      "title": "ARTIST: Agentic Reasoning and Tool Integration for LLMs via Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2505.01441",
+      "section": "Tool-use and API-agent RL",
+      "tier": "core",
+      "description": "Training approach that makes tool invocation and environment interaction first-class operations for agentic LLMs."
+    },
+    {
+      "title": "volcengine/verl",
+      "url": "https://github.com/volcengine/verl",
+      "section": "Training systems and infrastructure",
+      "tier": "core",
+      "description": "**veRL**: performant RL trainer for LLMs (PPO, GRPO, etc.) aimed at large GPU clusters."
+    },
+    {
+      "title": "OpenRLHF/OpenRLHF",
+      "url": "https://github.com/OpenRLHF/OpenRLHF",
+      "section": "Training systems and infrastructure",
+      "tier": "core",
+      "description": "Distributed RLHF stack with Ray and Hugging Face models."
+    },
+    {
+      "title": "huggingface/trl",
+      "url": "https://github.com/huggingface/trl",
+      "section": "Training systems and infrastructure",
+      "tier": "core",
+      "description": "**TRL**: trainers for SFT, DPO, PPO, reward modelling, and related objectives in the HF ecosystem."
+    },
+    {
+      "title": "OpenPipe/ART",
+      "url": "https://github.com/OpenPipe/ART",
+      "section": "Training systems and infrastructure",
+      "tier": "core",
+      "description": "Agent reinforcement trainer focused on multi-turn tool use and traced rollouts."
+    },
+    {
+      "title": "OpenReward",
+      "url": "https://www.gr.inc/releases/introducing-openreward",
+      "section": "Training systems and infrastructure",
+      "tier": "core",
+      "description": "Open platform for serving RL environments as API endpoints for agent training and evaluation, built around the Open Reward Standard."
+    },
+    {
+      "title": "The Rise and Potential of Large Language Model Based Agents: A Survey",
+      "url": "https://arxiv.org/abs/2309.07864",
+      "section": "Foundations: RL, agents and interaction loops",
+      "tier": "adjacent",
+      "description": "Taxonomy of planning, memory, tool use, and multi-agent behaviour, grounded in agents as systems that act over time under partial observability."
+    },
+    {
+      "title": "Proximal Policy Optimization Algorithms",
+      "url": "https://arxiv.org/abs/1707.06347",
+      "section": "Foundations: RL, agents and interaction loops",
+      "tier": "adjacent",
+      "description": "**PPO**, a widely used on-policy update for policies that emit discrete tool or dialogue actions in agent trainers."
+    },
+    {
+      "title": "Trust Region Policy Optimization",
+      "url": "https://arxiv.org/abs/1502.05477",
+      "section": "Foundations: RL, agents and interaction loops",
+      "tier": "adjacent",
+      "description": "**TRPO**, constrained policy updates that underpin many stable large-scale agent fine-tuning pipelines."
+    },
+    {
+      "title": "Multi-Step Reasoning with Large Language Models, a Survey",
+      "url": "https://arxiv.org/abs/2407.11511",
+      "section": "RL for reasoning agents",
+      "tier": "adjacent",
+      "description": "Taxonomy of generating, evaluating, and controlling multi-step reasoning, including tool execution and RL-style fine-tuning hooks."
+    },
+    {
+      "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+      "url": "https://arxiv.org/abs/2402.03300",
+      "section": "RL for reasoning agents",
+      "tier": "adjacent",
+      "description": "Introduces **GRPO** (group relative policy optimisation) for efficient RL on reasoning traces; pairs naturally with agent trainers in [Training systems and infrastructure](#training-systems-and-infrastructure)."
+    },
+    {
+      "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2501.12948",
+      "section": "RL for reasoning agents",
+      "tier": "adjacent",
+      "description": "Large-scale RL (including a cold-start-free variant) that elicits long-horizon reasoning, using verifiable rewards on math and code."
+    },
+    {
+      "title": "Kimi k1.5: Scaling Reinforcement Learning with LLMs",
+      "url": "https://arxiv.org/abs/2501.12599",
+      "section": "RL for reasoning agents",
+      "tier": "adjacent",
+      "description": "RL recipe scaling long-context reasoning with policy optimisation and length control over reasoning rollouts."
+    },
+    {
+      "title": "STaR: Bootstrapping Reasoning With Reasoning",
+      "url": "https://arxiv.org/abs/2203.14465",
+      "section": "RL for reasoning agents",
+      "tier": "adjacent",
+      "description": "Self-taught reasoner that filters and reuses model-generated rationales as training data; an early grow-and-filter precursor to RL on reasoning traces."
+    },
+    {
+      "title": "Reinforcement Learning for LLM Post-Training: A Survey",
+      "url": "https://arxiv.org/abs/2407.16216",
+      "section": "RLHF, RLAIF and preference optimisation for agent backbones",
+      "tier": "adjacent",
+      "description": "Overview of RLHF, RLVR, PPO, GRPO, DPO, and related post-training methods that often initialise or regularise policies later deployed as agents."
+    },
+    {
+      "title": "Training language models to follow instructions with human feedback",
+      "url": "https://arxiv.org/abs/2203.02155",
+      "section": "RLHF, RLAIF and preference optimisation for agent backbones",
+      "tier": "adjacent",
+      "description": "InstructGPT-style supervised fine-tuning plus **RLHF** with a learned reward model."
+    },
+    {
+      "title": "Constitutional AI: Harmlessness from AI Feedback",
+      "url": "https://arxiv.org/abs/2212.08073",
+      "section": "RLHF, RLAIF and preference optimisation for agent backbones",
+      "tier": "adjacent",
+      "description": "**RLAIF**-style training using model-generated critiques and preference labels."
+    },
+    {
+      "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+      "url": "https://arxiv.org/abs/2305.18290",
+      "section": "RLHF, RLAIF and preference optimisation for agent backbones",
+      "tier": "adjacent",
+      "description": "**DPO**: single-stage preference optimisation without an explicit reward model rollout loop."
+    },
+    {
+      "title": "ORPO: Monolithic Preference Optimization without Reference Model",
+      "url": "https://arxiv.org/abs/2403.07691",
+      "section": "RLHF, RLAIF and preference optimisation for agent backbones",
+      "tier": "adjacent",
+      "description": "Odds-ratio preference optimisation combined with SFT-style objectives."
+    },
+    {
+      "title": "Model Alignment as Prospect Theoretic Optimization",
+      "url": "https://arxiv.org/abs/2402.01306",
+      "section": "RLHF, RLAIF and preference optimisation for agent backbones",
+      "tier": "adjacent",
+      "description": "**KTO** alignment from binary favourable-or-not labels."
+    },
+    {
+      "title": "Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback",
+      "url": "https://arxiv.org/abs/2307.15217",
+      "section": "RLHF, RLAIF and preference optimisation for agent backbones",
+      "tier": "adjacent",
+      "description": "Survey of RLHF limitations, open problems, complementary techniques, and oversight standards for feedback-trained systems."
+    },
+    {
+      "title": "Self-Rewarding Language Models",
+      "url": "https://arxiv.org/abs/2401.10020",
+      "section": "RLHF, RLAIF and preference optimisation for agent backbones",
+      "tier": "adjacent",
+      "description": "Iterative self-preference and policy improvement using the model as its own preference source—relevant when reward models are co-trained with the agent policy."
+    },
+    {
+      "title": "RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback",
+      "url": "https://arxiv.org/abs/2309.00267",
+      "section": "RLHF, RLAIF and preference optimisation for agent backbones",
+      "tier": "adjacent",
+      "description": "Compares human versus AI feedback for preference-model training at scale."
+    },
+    {
+      "title": "Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments",
+      "url": "https://arxiv.org/abs/1706.02275",
+      "section": "Multi-agent reinforcement learning",
+      "tier": "adjacent",
+      "description": "**MADDPG**, a standard baseline for continuous multi-agent control (conceptual background for mixed agent teams)."
+    },
+    {
+      "title": "QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning",
+      "url": "https://arxiv.org/abs/1803.11485",
+      "section": "Multi-agent reinforcement learning",
+      "tier": "adjacent",
+      "description": "Foundational cooperative MARL method for learning decentralised policies with centralised value factorisation."
+    },
+    {
+      "title": "MAPPO: The Surprising Effectiveness of PPO in Cooperative Multi-Agent Games",
+      "url": "https://arxiv.org/abs/2103.01955",
+      "section": "Multi-agent reinforcement learning",
+      "tier": "adjacent",
+      "description": "Strong baseline showing PPO-style methods can be effective in cooperative multi-agent RL."
+    },
+    {
+      "title": "Emergent Tool Use From Multi-Agent Autocurricula",
+      "url": "https://arxiv.org/abs/1909.07528",
+      "section": "Multi-agent reinforcement learning",
+      "tier": "adjacent",
+      "description": "Environment-driven curriculum and tool-like behaviour from multi-agent **RL** interaction."
+    },
+    {
+      "title": "PettingZoo",
+      "url": "https://pettingzoo.farama.org/",
+      "section": "Multi-agent reinforcement learning",
+      "tier": "adjacent",
+      "description": "Python library providing standardised multi-agent RL environments and APIs."
+    },
+    {
+      "title": "Melting Pot",
+      "url": "https://github.com/google-deepmind/meltingpot",
+      "section": "Multi-agent reinforcement learning",
+      "tier": "adjacent",
+      "description": "Multi-agent environment suite for studying social interaction, cooperation, competition, and generalisation."
+    },
+    {
+      "title": "OpenSpiel",
+      "url": "https://openspiel.readthedocs.io/",
+      "section": "Multi-agent reinforcement learning",
+      "tier": "adjacent",
+      "description": "Framework for reinforcement learning and search in games, including self-play and multi-agent decision-making."
+    },
+    {
+      "title": "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework",
+      "url": "https://arxiv.org/abs/2308.00352",
+      "section": "Multi-agent reinforcement learning",
+      "tier": "adjacent",
+      "description": "Role-specialised agents for software tasks (orchestration; often combined with feedback and eval loops)."
+    },
+    {
+      "title": "microsoft/autogen",
+      "url": "https://github.com/microsoft/autogen",
+      "section": "Multi-agent reinforcement learning",
+      "tier": "adjacent",
+      "description": "Multi-agent orchestration with hooks for human and model feedback (often used adjacent to RL eval loops and population-style training)."
+    },
+    {
+      "title": "Video PreTraining (VPT): Learning to Act by Watching Unlabeled Online Videos",
+      "url": "https://arxiv.org/abs/2206.11795",
+      "section": "Embodied and physical agents",
+      "tier": "adjacent",
+      "description": "Behavioural cloning plus **RL** fine-tuning for Minecraft-style agents from large video corpora."
+    },
+    {
+      "title": "MineDojo: Building Open-Ended Embodied Agents with Internet-Scale Knowledge",
+      "url": "https://arxiv.org/abs/2206.08853",
+      "section": "Embodied and physical agents",
+      "tier": "adjacent",
+      "description": "Benchmark and toolkit for open-ended embodied agents in Minecraft-like worlds."
+    },
+    {
+      "title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+      "url": "https://arxiv.org/abs/2307.15818",
+      "section": "Embodied and physical agents",
+      "tier": "adjacent",
+      "description": "Co-fine-tuning VLM objectives with robot actions; bridge between web-scale LMs and closed-loop physical control."
+    },
+    {
+      "title": "Open X-Embodiment / RT-X",
+      "url": "https://arxiv.org/abs/2310.08864",
+      "section": "Embodied and physical agents",
+      "tier": "adjacent",
+      "description": "Large-scale cross-embodiment robot learning effort for generalist robot policies trained across diverse robots and tasks."
+    },
+    {
+      "title": "RoboCat: A Self-Improving Generalist Agent for Robotic Manipulation",
+      "url": "https://arxiv.org/abs/2306.11706",
+      "section": "Embodied and physical agents",
+      "tier": "adjacent",
+      "description": "Self-improving robotic agent that learns across tasks and embodiments through demonstration, data collection, and iterative policy improvement."
+    },
+    {
+      "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+      "url": "https://arxiv.org/abs/2303.04137",
+      "section": "Embodied and physical agents",
+      "tier": "adjacent",
+      "description": "Visuomotor policy-learning approach using diffusion models for robot action generation."
+    },
+    {
+      "title": "RoboMimic",
+      "url": "https://github.com/ARISE-Initiative/robomimic",
+      "section": "Embodied and physical agents",
+      "tier": "adjacent",
+      "description": "Framework and benchmark suite for robot imitation learning, useful as a bridge between demonstrations and downstream RL fine-tuning."
+    },
+    {
+      "title": "Isaac Lab / Isaac Gym",
+      "url": "https://github.com/isaac-sim/IsaacLab",
+      "section": "Embodied and physical agents",
+      "tier": "adjacent",
+      "description": "Simulation infrastructure for scalable robot reinforcement learning, imitation learning, and sim-to-real experimentation."
+    },
+    {
+      "title": "RLinf-Co: Reinforcement Learning-Based Sim-Real Co-Training for VLA Models",
+      "url": "https://arxiv.org/abs/2602.12628",
+      "section": "Embodied and physical agents",
+      "tier": "adjacent",
+      "description": "Sim-real co-training approach that warm-starts VLA policies with demonstrations and improves them through RL in simulation."
+    },
+    {
+      "title": "Foundation Models Meet Embodied Agents",
+      "url": "https://foundation-models-meet-embodied-agents.github.io/cvpr2026/",
+      "section": "Embodied and physical agents",
+      "tier": "adjacent",
+      "description": "Workshop resource connecting foundation models, MDP-style robot decision-making, planning, and embodied agents."
+    },
+    {
+      "title": "Who Validates the Validators? Aligning LLM-Assisted Evaluation of LLM Outputs with Human Preferences",
+      "url": "https://arxiv.org/abs/2404.12272",
+      "section": "Evaluation, safety and control",
+      "tier": "adjacent",
+      "description": "Mixed-initiative approach for aligning LLM-generated evaluators with human requirements, including criteria drift in evaluation design."
+    },
+    {
+      "title": "Holistic Evaluation of Language Models (HELM)",
+      "url": "https://arxiv.org/abs/2211.09110",
+      "section": "Evaluation, safety and control",
+      "tier": "adjacent",
+      "description": "Multi-metric, multi-scenario evaluation framework; a reference point for designing broad, comparable agent evaluation suites."
+    },
+    {
+      "title": "AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents",
+      "url": "https://arxiv.org/abs/2410.09024",
+      "section": "Evaluation, safety and control",
+      "tier": "adjacent",
+      "description": "Benchmark of explicitly malicious agent tasks for measuring robustness to misuse in tool-using agents."
+    },
+    {
+      "title": "Reinforcement Learning with a Corrupted Reward Channel",
+      "url": "https://arxiv.org/abs/1705.08417",
+      "section": "Evaluation, safety and control",
+      "tier": "adjacent",
+      "description": "Formalises corrupt reward channels (misspecification, sensing errors) and mitigation angles relevant to learned reward models in deployed agents."
+    },
+    {
+      "title": "Goal Misgeneralization in Deep Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2105.14111",
+      "section": "Evaluation, safety and control",
+      "tier": "adjacent",
+      "description": "Shows agents can retain capabilities while pursuing the wrong objective off-distribution; directly relevant to reward and environment design for agents."
+    },
+    {
+      "title": "The Alignment Problem from a Deep Learning Perspective",
+      "url": "https://arxiv.org/abs/2209.00626",
+      "section": "Evaluation, safety and control",
+      "tier": "adjacent",
+      "description": "Position paper on misaligned goals, deceptive reward-seeking, and power-seeking risks as deep learning systems scale."
+    },
+    {
+      "title": "Concrete Problems in AI Safety",
+      "url": "https://arxiv.org/abs/1606.06565",
+      "section": "Evaluation, safety and control",
+      "tier": "adjacent",
+      "description": "Early articulation of specification, robustness, and monitoring issues relevant to agent training loops."
+    }
+  ]
+}

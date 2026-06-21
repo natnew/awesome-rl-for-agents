@@ -1,0 +1,27 @@
+# Labels for awesome-rl-for-agents.
+# Synced to the repository by .github/workflows/labels.yml.
+# These are the labels referenced by the issue templates and the README.
+
+- name: "good first issue"
+  color: "7057ff"
+  description: "Well-scoped, low-context task suitable for a first contribution."
+
+- name: "help wanted"
+  color: "008672"
+  description: "Maintainers would welcome a contribution here."
+
+- name: "new resource"
+  color: "0e8a16"
+  description: "Proposal to add a paper, benchmark, environment, or tool."
+
+- name: "link rot"
+  color: "d93f0b"
+  description: "Broken, moved, or superseded link."
+
+- name: "taxonomy"
+  color: "1d76db"
+  description: "Section structure, placement, or naming."
+
+- name: "docs"
+  color: "c5def5"
+  description: "README, contributing guide, or repository metadata."

@@ -1,0 +1,32 @@
+name: Report a broken or moved link
+description: Flag a dead link or a resource whose canonical URL has changed.
+title: "[Link]: <entry title>"
+labels: ["link rot"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry title
+      description: The list entry whose link is broken or has moved.
+    validations:
+      required: true
+  - type: input
+    id: current-url
+    attributes:
+      label: Current (broken) URL
+    validations:
+      required: true
+  - type: input
+    id: new-url
+    attributes:
+      label: Corrected URL (if known)
+      description: New arXiv ID, repository rename, or replacement canonical page.
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: What you verified
+      description: e.g. returns 404, repository renamed, paper superseded.
+    validations:
+      required: false

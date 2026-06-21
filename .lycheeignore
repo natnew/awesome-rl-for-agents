@@ -1,0 +1,3 @@
+# Hosts that rate-limit or block automated link checkers (checked manually).
+# arXiv occasionally returns 403 to CI user agents; entries are verified on submission.
+https://gorilla.cs.berkeley.edu/.*

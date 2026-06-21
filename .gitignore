@@ -15,6 +15,10 @@ Desktop.ini
 .idea/
 .vscode/
 
+# Python
+__pycache__/
+*.py[cod]
+
 # Logs and local scratch
 *.log
 *.tmp
