@@ -2,183 +2,277 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## What this repository is
+This repository is a public, maintained awesome list: *Awesome Reinforcement Learning for Agents*. It is a curated technical index, not an application codebase. The `README.md` is the product; `data/resources.json` is a generated mirror.
 
-A public, maintained **awesome list**: *Awesome Reinforcement Learning for Agents*. `README.md` is the
-single source of truth — a curated technical index, not an application codebase and not a marketing page.
-`data/resources.json` is a machine-readable mirror generated from the README. Most work here is curation,
-maintenance, and contribution review, not software development.
+There is one maintenance command, not a build/lint/test suite: after any entry change, regenerate the index with `python scripts/build_index.py`. CI (`.github/workflows/index.yml`) runs `--check` and fails if the README and JSON drift.
 
-## Default operating mode
+Claude Code should read this file first, then use `AGENTS.md` as the shared repository operating protocol.
 
-- Inspect `README.md` (and `data/resources.json` for duplicates) before making any curation decision.
-- Make the smallest safe change that satisfies the task; avoid broad rewrites unless explicitly requested.
-- Preserve the existing taxonomy — sections, headings, and ordering — unless explicitly asked to change it.
-- Prefer a maintainer edit for trivial fixes over creating contributor friction.
-- After editing README entries, regenerate the index (`python scripts/build_index.py`) in the same change.
+## North Star
 
-## Scope: what belongs
+* Preserve `README.md` as the canonical public artefact.
+* Keep the list selective, durable, technically useful, neutral, and easy to scan.
+* Help the maintainer make fast, consistent, low-friction decisions.
+* Prefer small, precise edits over broad rewrites.
+* Do not broaden the list beyond reinforcement learning for agents and the clearly adjacent fields already represented in the README.
 
-Entries must be **directly relevant to reinforcement learning applied to agents**:
+## Claude's Role
 
-- LLM agents, tool/API use, multi-agent systems, embodied agents where policy learning or reward feedback is central.
-- Infrastructure that primarily supports those settings (trainers, rollout services, environments, verifiers).
-- Canonical sources: arXiv `/abs/` pages, ACL Anthology, official project pages, canonical GitHub repositories,
-  datasets, durable docs.
+Claude may assist with:
 
-## Scope: what does not belong
+* PR review
+* Issue triage
+* README entry review
+* Broken-link investigation
+* Duplicate detection
+* Section placement
+* Neutral description rewrites
+* Maintainer comment drafts
+* Regenerating the index after an entry change
+* Small safe maintainer edits when explicitly asked
+* Improvements to agent instruction files when asked
 
-- Generic deep-RL resources with no clear agent connection (point to general RL lists instead).
-- Thin wrapper pages, landing pages, or low-signal tools when a primary source exists.
-- Affiliate links, referral trackers, shortened URLs, or PDF-only links without a readable summary.
-- Duplicate listings of the same work (link the canonical paper *or* repo once; mention the other in the same bullet).
-- Promotional, sales-led, or unsupported-claim entries.
+Claude must not:
 
-## Awesome-list quality standards
+* Add entries without checking scope, link quality, duplicates, and placement
+* Invent facts about a resource
+* Preserve promotional claims
+* Add ranking, pricing, novelty, adoption, or performance claims without strong evidence
+* Rewrite the taxonomy without explicit instruction
+* Hand-edit `data/resources.json` or the entry-count marker
+* Edit unrelated files
+* Touch protected areas unless instructed
+* Ask contributors to make trivial fixes the maintainer can safely make
 
-- Prefer relevance, durability, technical substance, source quality, and clear categorisation.
-- Prefer official sources, papers, repositories, datasets, and durable project pages over thin wrappers.
-- Remove or neutralise promotional, time-sensitive ("new", "latest"), ranking ("best", "#1"), pricing,
-  and unsupported claims.
-- Preserve the existing taxonomy unless a structural improvement is clearly justified (discuss via a
-  taxonomy issue before large reorganisations).
+## Repository Facts
 
-## README formatting rules
+* `AGENTS.md` contains the full tool-agnostic operating protocol.
+* `CONTRIBUTING.md` contains contributor-facing scope and entry rules.
+* `.github/ISSUE_TEMPLATE/` (`add-resource`, `broken-link`, `new-section`) and `.github/PULL_REQUEST_TEMPLATE.md` contain public contribution guidance.
+* `README.md` contains the intro, the entry-count marker, a Contents map, the curated sections, and a "Related awesome lists" pointer block.
+* The taxonomy is grouped: **On-ramp** (Surveys & reading paths), **Core — the RL-for-agents loop**, and **Adjacent & background**.
+* Each entry is a single bullet. Some sections carry explanatory text or a summary block before the bullets — preserve it.
+* New entries go under the **most specific** existing section, in the surrounding section's order (often chronological for tightly related benchmarks, otherwise alphabetical by title).
+* New sections are handled separately, via a `new-section` issue, before any large reorganisation.
+* `data/resources.json` and the entry-count marker are generated by `scripts/build_index.py` — never authored by hand.
 
-- Each entry is a single bullet:
-  ```markdown
-  - **[Title or project name](https://example.com/path)** — One concise sentence on what it is and why it matters for RL-for-agents readers.
-  ```
-- Use the em dash (`—`) between link and description; the build script also accepts a hyphen.
-- Keep a sensible within-section order (chronological for tightly related benchmarks, otherwise alphabetical —
-  match the surrounding list).
-- The entry-count marker `<!--entry-count-->N<!--/entry-count-->` in the intro is filled by the build script;
-  never hand-edit the number.
-- Contents links must resolve to a heading anchor (lowercased, punctuation stripped, spaces → hyphens).
+## Always-Loaded Context
 
-## Protected public-facing areas
+Keep this file short. It is an orientation layer, not a manual.
 
-Edit these only when the maintainer explicitly asks, or when the requested task directly requires it:
+Use this routing:
 
-- Badges and the badge row.
-- The entry-count marker (it is generated — see Maintenance).
-- The Contents structure and major taxonomy headings.
-- The "Related awesome lists" structure.
-- Contributor-facing banners or images (`assets/`).
-- Broad project positioning text (the intro, the "How this list is organised" framing, the disclaimer).
+* Need the full agent protocol → read `AGENTS.md`
+* Need contribution rules → read `CONTRIBUTING.md`
+* Need contributor or PR expectations → read `.github/ISSUE_TEMPLATE/` and `.github/PULL_REQUEST_TEMPLATE.md`
+* Need style examples → inspect the target section in `README.md`
+* Need to check a duplicate → search `README.md` and `data/resources.json`
+* Need maintainer precedent → inspect recent issues and merged PRs where available
 
-Adding an entry under an existing heading is normal curation, not a structural change.
+Do not duplicate long sections from those files here.
 
-## Link quality rules
+## First-Pass Workflow
 
-- Confirm links resolve (no 404). For arXiv, prefer `/abs/` over PDF-only links.
-- Use the canonical destination — no shortened, referral, or affiliate links.
-- A flaky-but-valid host can be added to `.lycheeignore` rather than removed.
+For any PR, issue, or README task:
 
-## Neutral description style
+1. Read the user request.
+2. Read the relevant issue, PR, diff, or target README section.
+3. Check the repository scope (RL applied to agents).
+4. Check `CONTRIBUTING.md` if the task concerns a submission.
+5. Check neighbouring entries for style and placement.
+6. Search `README.md` and `data/resources.json` for duplicates.
+7. Verify the link where tools allow (no 404; arXiv `/abs/` over PDF-only).
+8. Inspect the resource enough to understand what it is.
+9. Choose the smallest useful action.
+10. If entries changed, regenerate the index (`python scripts/build_index.py`).
+11. Produce a concise decision, edit, or maintainer comment.
 
-- One factual sentence: what the resource *is*, naming the RL signal or interaction loop it concerns
-  (environment, reward, trajectory, tool-use, multi-agent, embodied policy).
-- No superlatives, endorsements, or marketing language. Match the wording conventions of the surrounding list.
+## Entry Checklist
 
-## Examples
+Before recommending acceptance or adding an entry, confirm:
 
-Acceptable — canonical source, clear RL-for-agents connection, neutral one-liner, fits a Core section:
+* In scope, and the bullet names the RL signal or interaction loop it concerns
+* Technically useful
+* Credible, canonical source
+* Canonical, durable URL that resolves
+* No duplicate (including a paper and its repo listed twice)
+* Correct, most-specific section
+* Local format matched (single bullet, em dash)
+* Neutral one-line description
+* No hype, ranking, pricing, or time-sensitive claims
+* No avoidable tracking, referral, or shortened links
+* No unnecessary new section
+* Index regenerated if entries changed
+
+## Source Preference
+
+Prefer:
+
+* arXiv `/abs/` pages and ACL Anthology
+* Canonical GitHub repositories
+* Official documentation and project pages
+* Papers and technical reports
+* Benchmarks and datasets
+* Trainers, rollout services, environments, and verifiers that primarily support RL-for-agents settings
+
+Treat cautiously:
+
+* Generic deep-RL resources with no clear agent connection
+* Thin wrappers and landing pages where a primary source exists
+* Launch posts, vendor pages, newsletter or social posts
+* Unmaintained repositories and link farms
+* PDF-only links without a readable summary
+* Pages dominated by sales language or time-sensitive comparisons
+
+## Description Rules
+
+Default pattern:
 
 ```markdown
-- **[ExampleBench](https://arxiv.org/abs/2401.00000)** — Benchmark of multi-step tool-use tasks with environment-returned reward, for evaluating agent policies.
+- **[Title or project name](https://example.com/path)** — One concise sentence on what it is and why it matters for RL-for-agents readers.
 ```
 
-Weak — promotional wording, marketing/non-canonical link, unclear RL connection. Request a canonical source and a
-neutral description, or close if the connection cannot be established:
+Use the em dash (`—`) between link and description; the build script also accepts a hyphen.
 
-```markdown
-- **[BestAgentKit 🚀](https://bestagentkit.example.com/pricing)** — The #1 all-in-one platform to ship powerful AI agents fast.
-```
+Descriptions should:
 
-## Section placement
+* Be one factual sentence naming the RL signal or interaction loop (environment, reward, trajectory, tool-use, multi-agent, embodied policy)
+* Be short and specific
+* Match the surrounding section's wording conventions
+* Avoid title case
+* Explain what the resource is, not why it is exciting
 
-Core (the RL-for-agents loop): Environments & Benchmarks · Rollouts, trajectories and credit assignment ·
-Datasets & trajectory corpora · Verifiable Rewards & Reward Design · Tool-use and API-agent RL ·
-Training systems and infrastructure.
+Remove or neutralise:
 
-Adjacent & background: Foundations: RL, agents and interaction loops · RL for reasoning agents ·
-RLHF, RLAIF and preference optimisation for agent backbones · Multi-agent reinforcement learning ·
-Embodied and physical agents · Evaluation, safety and control.
+* "best", "latest", "new", "#1"
+* "most advanced", "powerful", "revolutionary", "cutting-edge"
+* "game-changing", "industry-leading", "fastest"
+* Unsupported performance, adoption, maturity, or pricing claims
 
-On-ramp: Surveys & reading paths (a reading path; prefer placing the resource itself in a Core/Adjacent section).
+## Section Placement
 
-- Place each item under the **most specific** existing section.
-- Core covers the loop directly; Adjacent covers foundations and neighbouring fields that inform agent policies.
-- If nothing fits, open a taxonomy issue before adding a new section.
+| Situation                             | Action                                                |
+| ------------------------------------- | ----------------------------------------------------- |
+| Exact fit in an existing section      | Place there.                                          |
+| Fits two sections                     | Choose the more specific or more discoverable one.    |
+| Similar to neighbouring entries       | Place near those entries if local ordering allows.    |
+| New theme with one entry              | Park, or place in the nearest broader section.        |
+| New theme with several strong entries | Suggest a section via a `new-section` issue; do not create it unless asked. |
+| Unclear placement                     | Explain the options briefly and recommend one.        |
 
-## Duplicate checking
+Core covers the RL-for-agents loop directly; Adjacent covers foundations and neighbouring fields that inform agent policies.
 
-Before adding or accepting an entry, check it is not already listed:
+## PR Triage
 
-- Search the README and `data/resources.json` for the title, the URL, and the arXiv ID / repo slug.
-- A paper and its repo are the same work — list once, cross-reference in the bullet if useful.
+| Decision        | Use when                                                                                  |
+| --------------- | ----------------------------------------------------------------------------------------- |
+| Accept as-is    | Scope, link, placement, format, and description are all sound.                            |
+| Maintainer edit | Strong resource needing only minor wording, link, placement, or formatting fixes, or an index regeneration. |
+| Request changes | Relevance, evidence, link quality, or placement is materially unclear.                    |
+| Close           | Out of scope, duplicate, promotional, broken with no replacement, or low technical value. |
+| Park            | Promising but immature, needs a taxonomy decision, or needs maintainer judgement.         |
 
-## Maintenance commands
+## Issue Triage
 
-- Regenerate the index and entry count: `python scripts/build_index.py`
-- CI parity check (fails if README and index drift): `python scripts/build_index.py --check`
+Suggestion issues:
 
-`scripts/build_index.py` parses curated bullets, stops at "Related awesome lists" (those are pointers, not
-counted), writes `data/resources.json`, and fills the entry-count marker.
+* Strong, in scope, canonical → draft entry and recommend acceptance.
+* Strong but wording or placement needs work → recommend maintainer edit.
+* Missing evidence → ask for minimal clarification.
+* Duplicate → close with a pointer to the existing entry.
+* Out of scope → close politely.
+* Premature or taxonomy-dependent → park.
 
-**Generated files.** `data/resources.json` and the entry-count marker are generated, not authored.
+Broken-link issues:
 
-- Do not edit `data/resources.json` by hand.
-- Update it only by running `python scripts/build_index.py`.
-- Commit it alongside `README.md`, and only when entry changes require regeneration.
+* Verify the link.
+* Find a canonical replacement first (new arXiv ID, repository rename, official mirror).
+* Prefer official sources over mirrors.
+* Remove only when no durable replacement exists.
+* A flaky-but-valid host can be added to `.lycheeignore` rather than removed.
+* Leave a concise note explaining the action, and regenerate the index if the entry set changed.
 
-## CI workflows
+## Small Safe Fix Rule
 
-- **Index** (`.github/workflows/index.yml`) — runs `build_index.py --check`; keeps README and JSON in sync.
-- **Links** (`.github/workflows/links.yml`) — lychee link check on `**/*.md`; weekly cron plus on change.
-- **Labels** (`.github/workflows/labels.yml`) — syncs `.github/labels.yml` (skip-delete).
+Protect contributor goodwill.
 
-A README content change that touches entries will fail Index until the index is regenerated.
+When a resource is suitable and the issue is minor, make or recommend a maintainer edit rather than asking the contributor to revise.
 
-## PR triage workflow
+Small safe fixes include:
 
-1. Confirm scope (RL-for-agents) and that the bullet names the RL signal / interaction loop.
-2. Check the link is canonical and resolves; check it is not a duplicate.
-3. Check placement is the most specific section, and ordering matches the surrounding list.
-4. Check the description is neutral and one line.
-5. If entries changed, ensure `data/resources.json` and the count were regenerated.
+* Tightening a description
+* Removing hype
+* Fixing punctuation or the em dash
+* Correcting placement
+* Replacing a non-canonical URL
+* Matching the bullet format
+* Removing tracking parameters
+* Regenerating the index
 
-## Issue-to-entry workflow
+## Stop and Ask
 
-- **Add a resource** issue → verify scope, link, section, non-duplication → add the bullet → regenerate index.
-- **Broken/moved link** issue → update the URL (or remove an irrecoverable entry) → note what was verified → regenerate.
-- **New section** (taxonomy) issue → agree the section and candidate entries before any large reorganisation.
+Stop before:
 
-## Disposition: accept / edit / request / close / park
+* Creating a new section or changing the taxonomy
+* Reordering large parts of the README
+* Editing the Contents structure or major headings
+* Editing the badge row, the intro, or the framing text
+* Changing contribution rules
+* Removing several entries
+* Making broad scope decisions
+* Editing unrelated files
 
-- **Accept as-is** when scope, link, placement, and wording all pass.
-- **Edit as maintainer** for small safe fixes — wording, casing, em dash, ordering, section move, regenerating
-  the index. Prefer this over bouncing a PR back for trivial changes.
-- **Request changes** only when needed: off-scope risk, non-canonical link, duplicate uncertainty, or a missing
-  rationale that the maintainer cannot resolve.
-- **Close** when the entry weakens the list (off-scope, promotional, thin wrapper, unfixable duplicate) — with a
-  brief reason.
-- **Park** (label, leave open) when the idea is plausible but needs discussion, e.g. a proposed new section.
+## Protected Areas
 
-## Contributor communication
+Do not edit unless explicitly instructed:
 
-- Warm, concise, respectful, low-friction. Thank contributors; explain decisions briefly.
-- When requesting changes, be specific and minimal — say exactly what would make the entry mergeable.
+* Badges and the badge row
+* The entry-count marker (generated — regenerate, do not hand-edit)
+* `data/resources.json` (generated — update only via the build script)
+* The Contents structure and major taxonomy headings
+* The "Related awesome lists" structure
+* The intro and the "How this list is organised" framing
+* Banners and images (`assets/`)
+* Licence text and unrelated repository metadata
+* Private, draft, scratch, or local-only files
 
-## Documentation conventions
+## Maintainer Comment Templates
 
-- Keep public-facing text calm, technically precise, and neutral.
-- Keep `README.md`, `CONTRIBUTING.md`, and `.github/**` concise and actionable.
-- Do not make claims the repository cannot substantiate.
+Accept:
 
-## Git
+"Thank you — this looks relevant, the link is canonical, and the placement works. I would accept this."
 
-- Work on a feature branch and open a PR rather than pushing to `main`.
-- Run `git status` before committing; do not stage `__pycache__/`, local scratch, or unrelated files.
-- Keep documentation/curation commits focused; do not bundle unrelated changes.
+Maintainer edit:
+
+"Thank you — this is a useful resource. I would accept it with a small maintainer edit to tighten the description and keep the wording neutral."
+
+Request changes:
+
+"Thank you for the suggestion. I think this could fit, but I would ask for a little more context on why this is the canonical source and where it belongs."
+
+Duplicate:
+
+"Thank you — I would close this as a duplicate because the resource already appears under [section]."
+
+Out of scope:
+
+"Thank you for sharing this. I would close it because it sits outside the current scope of the list."
+
+Park:
+
+"Thank you — this may be worth revisiting, but I would park it for now until the list has a clearer section for this category."
+
+## Output Format
+
+For PR or issue review, respond with:
+
+* **Decision**: accept, maintainer edit, request changes, close, or park
+* **Reason**: 1–3 bullets
+* **Suggested README entry**, if useful
+* **Suggested maintainer comment**
+* **Files changed**, if any (note whether the index was regenerated)
+* **Remaining uncertainty**, if any
+
+## Editing Rule
+
+Do not modify `README.md`, `data/resources.json`, `CONTRIBUTING.md`, `.github` templates, or other files unless explicitly asked.
