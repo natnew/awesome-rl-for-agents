@@ -1,5 +1,5 @@
 {
-  "count": 85,
+  "count": 86,
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -161,6 +161,13 @@
       "section": "Rollouts, trajectories and credit assignment",
       "tier": "core",
       "description": "Scalable rollout infrastructure for sandboxed trajectory collection and RL training across software engineering, coding, math, and STEM tasks."
+    },
+    {
+      "title": "SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2607.14777",
+      "section": "Rollouts, trajectories and credit assignment",
+      "tier": "core",
+      "description": "On-policy distillation framework that converts completed agent trajectories into hindsight skills and dense token-level training signals, with code at [jinyangwu/SEED](https://github.com/jinyangwu/SEED)."
     },
     {
       "title": "Agent Lightning: Train ANY AI Agents with Reinforcement Learning",
