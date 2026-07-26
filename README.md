@@ -11,7 +11,7 @@
 
 A curated map of reinforcement learning for agents: systems that learn through interaction with environments, tools, APIs, users, other agents or the physical world. The list covers agent environments, rollouts, credit assignment, reward design, tool-use learning, multi-agent RL, embodied agents and the LLM post-training methods that increasingly power agentic behaviour.
 
-It currently indexes <!--entry-count-->86<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
+It currently indexes <!--entry-count-->87<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
 
 > **RL for agents** here means optimising behaviour through a loop: the agent observes state, chooses an action (tool call, API request, message to a user or another agent, or a physical control), the environment transitions, a reward or verification signal is returned, and trajectories update the policy. That is broader than **RL for LLM behaviour alone** (instruction following, preference alignment, and trace-only updates without an environment-mediated transition)—but those methods increasingly train the **backbones** of tool-using and embodied agents, so they appear as their own slice below.
 
@@ -70,6 +70,7 @@ Section-level surveys worth reading first: the agents survey and post-training s
 - **[BrowserGym](https://github.com/ServiceNow/BrowserGym)** — Open Gym-style framework for designing, testing, and evaluating browser agents across web task environments.
 - **[WorkArena: How Capable Are Web Agents at Solving Common Knowledge Work Tasks?](https://arxiv.org/abs/2403.07718)** — Enterprise web-agent benchmark built around common knowledge-worker workflows in browser-based software.
 - **[VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks](https://arxiv.org/abs/2401.13649)** — Multimodal web-agent benchmark focused on visually grounded tasks in realistic web environments.
+- **[ClawBench: Can AI Agents Complete Everyday Online Tasks?](https://arxiv.org/abs/2604.08523)** — Live-website browser-agent benchmark that scores multi-step rollouts with terminal-request interception and an instruction-conditioned payload judge ([code](https://github.com/reacher-z/ClawBench)).
 - **[WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents](https://arxiv.org/abs/2207.01206)** — Simulated e-commerce shopping from language goals.
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** — Repository-scale software engineering tasks grounded in real GitHub issues and corresponding pull requests.
 - **[SWE-Gym: Training Software Engineering Agents and Verifiers](https://arxiv.org/abs/2412.21139)** — Environment for training software engineering agents with real Python repositories, executable runtimes, unit tests, and natural-language issue specifications.
