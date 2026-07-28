@@ -1,5 +1,5 @@
 {
-  "count": 87,
+  "count": 89,
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -177,6 +177,13 @@
       "description": "On-policy distillation framework that converts completed agent trajectories into hindsight skills and dense token-level training signals, with code at [jinyangwu/SEED](https://github.com/jinyangwu/SEED)."
     },
     {
+      "title": "Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills",
+      "url": "https://github.com/Qwen-Applications/skill-self-play",
+      "section": "Rollouts, trajectories and credit assignment",
+      "tier": "core",
+      "description": "Self-play reinforcement learning framework in which proposer, solver, and controller agents co-evolve skills through generated tasks, solution rollouts, and reward-guided policy updates."
+    },
+    {
       "title": "Agent Lightning: Train ANY AI Agents with Reinforcement Learning",
       "url": "https://arxiv.org/abs/2508.03680",
       "section": "Rollouts, trajectories and credit assignment",
@@ -308,6 +315,13 @@
       "section": "Training systems and infrastructure",
       "tier": "core",
       "description": "Open platform for serving RL environments as API endpoints for agent training and evaluation, built around the Open Reward Standard."
+    },
+    {
+      "title": "NVIDIA-NeMo/labs-molt",
+      "url": "https://github.com/NVIDIA-NeMo/labs-molt",
+      "section": "Training systems and infrastructure",
+      "tier": "core",
+      "description": "**Molt** is lightweight, scalable PyTorch-native infrastructure for training agent policies from environment-interaction trajectories and reinforcement-learning rewards, accompanied by the paper *Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning*."
     },
     {
       "title": "The Rise and Potential of Large Language Model Based Agents: A Survey",
