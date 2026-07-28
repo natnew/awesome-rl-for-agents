@@ -93,6 +93,7 @@ Section-level surveys worth reading first: the agents survey and post-training s
 - **[AgentGym-RL / ScalingInter-RL](https://arxiv.org/abs/2509.08755)** — RL framework for long-horizon, multi-turn agent learning with emphasis on stability, exploration, and avoiding behavioural collapse.
 - **[ProRL Agent: Rollout-as-a-Service for RL Training of Multi-Turn LLM Agents](https://arxiv.org/abs/2603.18815)** — Scalable rollout infrastructure for sandboxed trajectory collection and RL training across software engineering, coding, math, and STEM tasks.
 - **[SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning](https://arxiv.org/abs/2607.14777)** — On-policy distillation framework that converts completed agent trajectories into hindsight skills and dense token-level training signals, with code at [jinyangwu/SEED](https://github.com/jinyangwu/SEED).
+- **[Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills](https://github.com/Qwen-Applications/skill-self-play)** — Self-play reinforcement learning framework in which proposer, solver, and controller agents co-evolve skills through generated tasks, solution rollouts, and reward-guided policy updates.
 - **[Agent Lightning: Train ANY AI Agents with Reinforcement Learning](https://arxiv.org/abs/2508.03680)** — Framework for adding reinforcement learning to existing agents by decoupling agent execution from RL training.
 
 ## Datasets & trajectory corpora
