@@ -1,5 +1,5 @@
 {
-  "count": 86,
+  "count": 87,
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -28,6 +28,13 @@
       "section": "Environments & Benchmarks",
       "tier": "core",
       "description": "Multimodal web-agent benchmark focused on visually grounded tasks in realistic web environments."
+    },
+    {
+      "title": "ClawBench: Can AI Agents Complete Everyday Online Tasks?",
+      "url": "https://arxiv.org/abs/2604.08523",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Live-website browser-agent benchmark that scores multi-step rollouts with terminal-request interception and an instruction-conditioned payload judge ([code](https://github.com/reacher-z/ClawBench))."
     },
     {
       "title": "WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents",
