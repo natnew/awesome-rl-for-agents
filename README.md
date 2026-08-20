@@ -11,7 +11,7 @@
 
 A curated map of reinforcement learning for agents: systems that learn through interaction with environments, tools, APIs, users, other agents or the physical world. The list covers agent environments, rollouts, credit assignment, reward design, tool-use learning, multi-agent RL, embodied agents and the LLM post-training methods that increasingly power agentic behaviour.
 
-It currently indexes <!--entry-count-->89<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
+It currently indexes <!--entry-count-->90<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
 
 > **RL for agents** here means optimising behaviour through a loop: the agent observes state, chooses an action (tool call, API request, message to a user or another agent, or a physical control), the environment transitions, a reward or verification signal is returned, and trajectories update the policy. That is broader than **RL for LLM behaviour alone** (instruction following, preference alignment, and trace-only updates without an environment-mediated transition)—but those methods increasingly train the **backbones** of tool-using and embodied agents, so they appear as their own slice below.
 
@@ -140,6 +140,7 @@ See also **[OpenPipe/ART](#training-systems-and-infrastructure)** for multi-turn
 - **[OpenPipe/ART](https://github.com/OpenPipe/ART)** — Agent reinforcement trainer focused on multi-turn tool use and traced rollouts.
 - **[OpenReward](https://www.gr.inc/releases/introducing-openreward)** — Open platform for serving RL environments as API endpoints for agent training and evaluation, built around the Open Reward Standard.
 - **[NVIDIA-NeMo/labs-molt](https://github.com/NVIDIA-NeMo/labs-molt)** — **Molt** is lightweight, scalable PyTorch-native infrastructure for training agent policies from environment-interaction trajectories and reinforcement-learning rewards, accompanied by the paper *Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning*.
+- **[ClawGym II: Exploring Black-Box RL on Agent Harness](https://arxiv.org/abs/2608.16798)** — Black-box RL framework that optimises a policy model from rollouts produced by unmodified agent harnesses such as OpenClaw and Claude Code, and supports joint training across heterogeneous harnesses.
 
 ---
 
