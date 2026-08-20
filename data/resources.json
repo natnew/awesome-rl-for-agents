@@ -125,7 +125,7 @@
       "url": "https://arxiv.org/abs/2608.15265",
       "section": "Environments & Benchmarks",
       "tier": "core",
-      "description": "arXiv preprint added at maintainer request; description and section placement pending verification of the source."
+      "description": "A multimodal RL post-training environment with sandboxed asset retrieval, editing and rendering tools, plus a verifier that evaluates physical feasibility and intent fulfilment."
     },
     {
       "title": "RL environments guide (Hugging Face Space)",
