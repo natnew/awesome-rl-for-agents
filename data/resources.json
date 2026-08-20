@@ -1,5 +1,5 @@
 {
-  "count": 89,
+  "count": 90,
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -322,6 +322,13 @@
       "section": "Training systems and infrastructure",
       "tier": "core",
       "description": "**Molt** is lightweight, scalable PyTorch-native infrastructure for training agent policies from environment-interaction trajectories and reinforcement-learning rewards, accompanied by the paper *Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning*."
+    },
+    {
+      "title": "ClawGym II: Exploring Black-Box RL on Agent Harness",
+      "url": "https://arxiv.org/abs/2608.16798",
+      "section": "Training systems and infrastructure",
+      "tier": "core",
+      "description": "Black-box RL framework that optimises a policy model from rollouts produced by unmodified agent harnesses such as OpenClaw and Claude Code, and supports joint training across heterogeneous harnesses."
     },
     {
       "title": "The Rise and Potential of Large Language Model Based Agents: A Survey",
