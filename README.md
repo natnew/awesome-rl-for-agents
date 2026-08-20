@@ -83,7 +83,7 @@ Section-level surveys worth reading first: the agents survey and post-training s
 - **[GAIA: A Benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** — Multi-step assistant tasks requiring web, tools, and reasoning.
 - **[AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents](https://arxiv.org/abs/2407.18901)** — Stateful API-level “app world” for coding agents.
 - **[Berkeley Function Calling Leaderboard (Gorilla)](https://gorilla.cs.berkeley.edu/leaderboard.html)** — Leaderboard and tooling for evaluating function-calling reliability.
-- **[VibeWorlding](https://arxiv.org/abs/2608.15265)** — arXiv preprint added at maintainer request; description and section placement pending verification of the source.
+- **[VibeWorlding](https://arxiv.org/abs/2608.15265)** — A multimodal RL post-training environment with sandboxed asset retrieval, editing and rendering tools, plus a verifier that evaluates physical feasibility and intent fulfilment.
 - **[RL environments guide (Hugging Face Space)](https://huggingface.co/spaces/AdithyaSK/rl-environments-guide#what-makes-an-rl-environment-for-llms-the-components)** — Interactive walkthrough of what makes an **RL environment for LLMs** (components, design, and scaling in the LLM era).
 - **[RL for Agents Workshop — Deep Dive on Training Agents with RL and Open Source](https://www.youtube.com/watch?v=cixmqTsi2A4&list=PLdX2l3YHtVlpS5hoQjeJWo1bsWhdfyhvn&index=48)** — Hugging Face YouTube session on training agents with RL and open-source stacks (playlist item).
 
