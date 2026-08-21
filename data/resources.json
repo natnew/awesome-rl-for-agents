@@ -1,5 +1,5 @@
 {
-  "count": 90,
+  "count": 91,
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -119,6 +119,13 @@
       "section": "Environments & Benchmarks",
       "tier": "core",
       "description": "Leaderboard and tooling for evaluating function-calling reliability."
+    },
+    {
+      "title": "VibeWorlding",
+      "url": "https://arxiv.org/abs/2608.15265",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "A multimodal RL post-training environment with sandboxed asset retrieval, editing and rendering tools, plus a verifier that evaluates physical feasibility and intent fulfilment."
     },
     {
       "title": "RL environments guide (Hugging Face Space)",

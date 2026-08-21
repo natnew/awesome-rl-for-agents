@@ -11,7 +11,7 @@
 
 A curated map of reinforcement learning for agents: systems that learn through interaction with environments, tools, APIs, users, other agents or the physical world. The list covers agent environments, rollouts, credit assignment, reward design, tool-use learning, multi-agent RL, embodied agents and the LLM post-training methods that increasingly power agentic behaviour.
 
-It currently indexes <!--entry-count-->90<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
+It currently indexes <!--entry-count-->91<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
 
 > **RL for agents** here means optimising behaviour through a loop: the agent observes state, chooses an action (tool call, API request, message to a user or another agent, or a physical control), the environment transitions, a reward or verification signal is returned, and trajectories update the policy. That is broader than **RL for LLM behaviour alone** (instruction following, preference alignment, and trace-only updates without an environment-mediated transition)—but those methods increasingly train the **backbones** of tool-using and embodied agents, so they appear as their own slice below.
 
@@ -83,6 +83,7 @@ Section-level surveys worth reading first: the agents survey and post-training s
 - **[GAIA: A Benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** — Multi-step assistant tasks requiring web, tools, and reasoning.
 - **[AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents](https://arxiv.org/abs/2407.18901)** — Stateful API-level “app world” for coding agents.
 - **[Berkeley Function Calling Leaderboard (Gorilla)](https://gorilla.cs.berkeley.edu/leaderboard.html)** — Leaderboard and tooling for evaluating function-calling reliability.
+- **[VibeWorlding](https://arxiv.org/abs/2608.15265)** — A multimodal RL post-training environment with sandboxed asset retrieval, editing and rendering tools, plus a verifier that evaluates physical feasibility and intent fulfilment.
 - **[RL environments guide (Hugging Face Space)](https://huggingface.co/spaces/AdithyaSK/rl-environments-guide#what-makes-an-rl-environment-for-llms-the-components)** — Interactive walkthrough of what makes an **RL environment for LLMs** (components, design, and scaling in the LLM era).
 - **[RL for Agents Workshop — Deep Dive on Training Agents with RL and Open Source](https://www.youtube.com/watch?v=cixmqTsi2A4&list=PLdX2l3YHtVlpS5hoQjeJWo1bsWhdfyhvn&index=48)** — Hugging Face YouTube session on training agents with RL and open-source stacks (playlist item).
 
