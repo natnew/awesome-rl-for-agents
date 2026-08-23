@@ -1,5 +1,5 @@
 {
-  "count": 91,
+  "count": 92,
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -126,6 +126,13 @@
       "section": "Environments & Benchmarks",
       "tier": "core",
       "description": "A multimodal RL post-training environment with sandboxed asset retrieval, editing and rendering tools, plus a verifier that evaluates physical feasibility and intent fulfilment."
+    },
+    {
+      "title": "EnvHarness: Awakening Static Worlds for Agent Learning",
+      "url": "https://arxiv.org/abs/2608.19880",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Programmable plug-in layer that wraps a static agent environment to reshape actions, observations and state transitions while retaining its original verifier, so training environments can target diagnosed policy weaknesses and co-evolve with the policy during RL."
     },
     {
       "title": "RL environments guide (Hugging Face Space)",
