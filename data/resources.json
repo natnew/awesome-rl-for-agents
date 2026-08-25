@@ -1,5 +1,5 @@
 {
-  "count": 92,
+  "count": 93,
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -126,6 +126,13 @@
       "section": "Environments & Benchmarks",
       "tier": "core",
       "description": "A multimodal RL post-training environment with sandboxed asset retrieval, editing and rendering tools, plus a verifier that evaluates physical feasibility and intent fulfilment."
+    },
+    {
+      "title": "FACET: Preserving Source Intent and Executable State in Terminal Task Synthesis",
+      "url": "https://arxiv.org/abs/2608.18580",
+      "section": "Environments & Benchmarks",
+      "tier": "core",
+      "description": "Task synthesis framework that constructs executable terminal environments, instructions, reference solutions and verifiers from a shared realised environment state, then collects verified successful trajectories for agent fine-tuning."
     },
     {
       "title": "EnvHarness: Awakening Static Worlds for Agent Learning",
