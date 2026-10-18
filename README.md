@@ -11,6 +11,8 @@
 
 A curated map of reinforcement learning for agents: systems that learn through interaction with environments, tools, APIs, users, other agents or the physical world. The list covers agent environments, rollouts, credit assignment, reward design, tool-use learning, multi-agent RL, embodied agents and the LLM post-training methods that increasingly power agentic behaviour.
 
+
+It currently indexes <!--entry-count-->97<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
 It currently indexes <!--entry-count-->94<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
 
 > **RL for agents** here means optimising behaviour through a loop: the agent observes state, chooses an action (tool call, API request, message to a user or another agent, or a physical control), the environment transitions, a reward or verification signal is returned, and trajectories update the policy. That is broader than **RL for LLM behaviour alone** (instruction following, preference alignment, and trace-only updates without an environment-mediated transition)—but those methods increasingly train the **backbones** of tool-using and embodied agents, so they appear as their own slice below.
@@ -99,6 +101,7 @@ Section-level surveys worth reading first: the agents survey and post-training s
 - **[SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning](https://arxiv.org/abs/2607.14777)** — On-policy distillation framework that converts completed agent trajectories into hindsight skills and dense token-level training signals, with code at [jinyangwu/SEED](https://github.com/jinyangwu/SEED).
 - **[Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills](https://github.com/Qwen-Applications/skill-self-play)** — Self-play reinforcement learning framework in which proposer, solver, and controller agents co-evolve skills through generated tasks, solution rollouts, and reward-guided policy updates.
 - **[Agent Lightning: Train ANY AI Agents with Reinforcement Learning](https://arxiv.org/abs/2508.03680)** — Framework for adding reinforcement learning to existing agents by decoupling agent execution from RL training.
+- **[Back to the Definition: Estimating Step-Level Advantages via Trajectory Graphs for Agentic Reinforcement Learning](https://arxiv.org/abs/2609.28963)** — **GRAFT** merges grouped rollouts into a state–action graph and propagates sparse outcome rewards by Bellman iteration to assign step-level advantages to multi-turn agent actions.
 
 ## Datasets & trajectory corpora
 
@@ -132,6 +135,7 @@ SWE-Gym also belongs here conceptually: its executable runtimes and unit tests t
 - **[RLTR: Reinforcement Learning with Tool-use Rewards](https://arxiv.org/abs/2508.19598)** — RL framework for LLM agent planning that rewards tool-use completeness across multi-step tool invocation sequences.
 - **[Tool-R1: Sample-Efficient Reinforcement Learning for Agentic Tool Use](https://arxiv.org/abs/2509.12867)** — RL framework for compositional, multi-step tool use through executable code generation.
 - **[ARTIST: Agentic Reasoning and Tool Integration for LLMs via Reinforcement Learning](https://arxiv.org/abs/2505.01441)** — Training approach that makes tool invocation and environment interaction first-class operations for agentic LLMs.
+- **[SLCA-GRPO: Resolving Cross-Segment Credit Misattribution in Tool-Calling RL](https://arxiv.org/abs/2609.29050)** — GRPO variant that normalises tool-execution process rewards and final-summary rewards separately and routes each only to its own token segment, trained against a schema-guided tool simulator ([code](https://github.com/SLCA-GRPO/SLCA-GRPO)).
 
 See also **[OpenPipe/ART](#training-systems-and-infrastructure)** for multi-turn tool-use agents, traced rollouts, and task-specific rewards.
 
@@ -144,6 +148,7 @@ See also **[OpenPipe/ART](#training-systems-and-infrastructure)** for multi-turn
 - **[OpenReward](https://www.gr.inc/releases/introducing-openreward)** — Open platform for serving RL environments as API endpoints for agent training and evaluation, built around the Open Reward Standard.
 - **[NVIDIA-NeMo/labs-molt](https://github.com/NVIDIA-NeMo/labs-molt)** — **Molt** is lightweight, scalable PyTorch-native infrastructure for training agent policies from environment-interaction trajectories and reinforcement-learning rewards, accompanied by the paper *Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning*.
 - **[ClawGym II: Exploring Black-Box RL on Agent Harness](https://arxiv.org/abs/2608.16798)** — Black-box RL framework that optimises a policy model from rollouts produced by unmodified agent harnesses such as OpenClaw and Claude Code, and supports joint training across heterogeneous harnesses.
+- **[KV-streams for Efficient Compaction in Agentic Reinforcement Learning](https://arxiv.org/abs/2609.35750)** — Carries the KV cache forward across context compactions during asynchronous RL for long-horizon agents, so the policy trains on environment task rewards without re-prefilling and learns to use the streamed cache as recurrent state.
 - **[Human-Agent-Society/reef](https://github.com/Human-Agent-Society/reef)** — **Reef**: serving infrastructure that puts an OpenAI- and Anthropic-compatible endpoint in front of an agent, returns a receipt for each recorded interaction so a later report can attach a numeric score or textual feedback to that rollout, and batches eligible records into policy updates — model weights via Slime and SGLang, or an agent harness tree — published as versioned artifacts to the running endpoint.
 
 ---
@@ -199,6 +204,7 @@ See also **[OpenPipe/ART](#training-systems-and-infrastructure)** for multi-turn
 - **[RoboMimic](https://github.com/ARISE-Initiative/robomimic)** — Framework and benchmark suite for robot imitation learning, useful as a bridge between demonstrations and downstream RL fine-tuning.
 - **[Isaac Lab / Isaac Gym](https://github.com/isaac-sim/IsaacLab)** — Simulation infrastructure for scalable robot reinforcement learning, imitation learning, and sim-to-real experimentation.
 - **[RLinf-Co: Reinforcement Learning-Based Sim-Real Co-Training for VLA Models](https://arxiv.org/abs/2602.12628)** — Sim-real co-training approach that warm-starts VLA policies with demonstrations and improves them through RL in simulation.
+- **[SeanCole02/doom-neuron](https://github.com/SeanCole02/doom-neuron)** — PPO harness that connects cultured human neurons on a Cortical Labs CL1 chip to VizDoom, training the stimulation encoder by policy gradient over non-differentiable spikes and delivering reward as feedback stimulation through a shaped deadly-corridor curriculum.
 - **[Foundation Models Meet Embodied Agents](https://foundation-models-meet-embodied-agents.github.io/cvpr2026/)** — Workshop resource connecting foundation models, MDP-style robot decision-making, planning, and embodied agents.
 
 ## Evaluation, safety and control

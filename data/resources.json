@@ -1,5 +1,8 @@
 {
+
+  "count": 97,
   "count": 94,
+
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -212,6 +215,13 @@
       "description": "Framework for adding reinforcement learning to existing agents by decoupling agent execution from RL training."
     },
     {
+      "title": "Back to the Definition: Estimating Step-Level Advantages via Trajectory Graphs for Agentic Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2609.28963",
+      "section": "Rollouts, trajectories and credit assignment",
+      "tier": "core",
+      "description": "**GRAFT** merges grouped rollouts into a state–action graph and propagates sparse outcome rewards by Bellman iteration to assign step-level advantages to multi-turn agent actions."
+    },
+    {
       "title": "Mind2Web: Towards a Generalist Agent for the Web",
       "url": "https://arxiv.org/abs/2306.06070",
       "section": "Datasets & trajectory corpora",
@@ -303,6 +313,13 @@
       "description": "Training approach that makes tool invocation and environment interaction first-class operations for agentic LLMs."
     },
     {
+      "title": "SLCA-GRPO: Resolving Cross-Segment Credit Misattribution in Tool-Calling RL",
+      "url": "https://arxiv.org/abs/2609.29050",
+      "section": "Tool-use and API-agent RL",
+      "tier": "core",
+      "description": "GRPO variant that normalises tool-execution process rewards and final-summary rewards separately and routes each only to its own token segment, trained against a schema-guided tool simulator ([code](https://github.com/SLCA-GRPO/SLCA-GRPO))."
+    },
+    {
       "title": "volcengine/verl",
       "url": "https://github.com/volcengine/verl",
       "section": "Training systems and infrastructure",
@@ -352,11 +369,19 @@
       "description": "Black-box RL framework that optimises a policy model from rollouts produced by unmodified agent harnesses such as OpenClaw and Claude Code, and supports joint training across heterogeneous harnesses."
     },
     {
+
+      "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2609.35750",
+      "section": "Training systems and infrastructure",
+      "tier": "core",
+      "description": "Carries the KV cache forward across context compactions during asynchronous RL for long-horizon agents, so the policy trains on environment task rewards without re-prefilling and learns to use the streamed cache as recurrent state."
+
       "title": "Human-Agent-Society/reef",
       "url": "https://github.com/Human-Agent-Society/reef",
       "section": "Training systems and infrastructure",
       "tier": "core",
       "description": "**Reef**: serving infrastructure that puts an OpenAI- and Anthropic-compatible endpoint in front of an agent, returns a receipt for each recorded interaction so a later report can attach a numeric score or textual feedback to that rollout, and batches eligible records into policy updates — model weights via Slime and SGLang, or an agent harness tree — published as versioned artifacts to the running endpoint."
+
     },
     {
       "title": "The Rise and Potential of Large Language Model Based Agents: A Survey",
@@ -602,6 +627,13 @@
       "section": "Embodied and physical agents",
       "tier": "adjacent",
       "description": "Sim-real co-training approach that warm-starts VLA policies with demonstrations and improves them through RL in simulation."
+    },
+    {
+      "title": "SeanCole02/doom-neuron",
+      "url": "https://github.com/SeanCole02/doom-neuron",
+      "section": "Embodied and physical agents",
+      "tier": "adjacent",
+      "description": "PPO harness that connects cultured human neurons on a Cortical Labs CL1 chip to VizDoom, training the stimulation encoder by policy gradient over non-differentiable spikes and delivering reward as feedback stimulation through a shaped deadly-corridor curriculum."
     },
     {
       "title": "Foundation Models Meet Embodied Agents",
