@@ -1,5 +1,5 @@
 {
-  "count": 93,
+  "count": 94,
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -350,6 +350,13 @@
       "section": "Training systems and infrastructure",
       "tier": "core",
       "description": "Black-box RL framework that optimises a policy model from rollouts produced by unmodified agent harnesses such as OpenClaw and Claude Code, and supports joint training across heterogeneous harnesses."
+    },
+    {
+      "title": "Human-Agent-Society/reef",
+      "url": "https://github.com/Human-Agent-Society/reef",
+      "section": "Training systems and infrastructure",
+      "tier": "core",
+      "description": "**Reef**: serving infrastructure that puts an OpenAI- and Anthropic-compatible endpoint in front of an agent, returns a receipt for each recorded interaction so a later report can attach a numeric score or textual feedback to that rollout, and batches eligible records into policy updates — model weights via Slime and SGLang, or an agent harness tree — published as versioned artifacts to the running endpoint."
     },
     {
       "title": "The Rise and Potential of Large Language Model Based Agents: A Survey",
