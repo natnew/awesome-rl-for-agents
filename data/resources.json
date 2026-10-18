@@ -1,5 +1,5 @@
 {
-  "count": 95,
+  "count": 96,
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -364,6 +364,13 @@
       "section": "Training systems and infrastructure",
       "tier": "core",
       "description": "Black-box RL framework that optimises a policy model from rollouts produced by unmodified agent harnesses such as OpenClaw and Claude Code, and supports joint training across heterogeneous harnesses."
+    },
+    {
+      "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2609.35750",
+      "section": "Training systems and infrastructure",
+      "tier": "core",
+      "description": "Carries the KV cache forward across context compactions during asynchronous RL for long-horizon agents, so the policy trains on environment task rewards without re-prefilling and learns to use the streamed cache as recurrent state."
     },
     {
       "title": "The Rise and Potential of Large Language Model Based Agents: A Survey",
