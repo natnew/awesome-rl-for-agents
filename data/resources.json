@@ -1,5 +1,5 @@
 {
-  "count": 96,
+  "count": 97,
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -616,6 +616,13 @@
       "section": "Embodied and physical agents",
       "tier": "adjacent",
       "description": "Sim-real co-training approach that warm-starts VLA policies with demonstrations and improves them through RL in simulation."
+    },
+    {
+      "title": "SeanCole02/doom-neuron",
+      "url": "https://github.com/SeanCole02/doom-neuron",
+      "section": "Embodied and physical agents",
+      "tier": "adjacent",
+      "description": "PPO harness that connects cultured human neurons on a Cortical Labs CL1 chip to VizDoom, training the stimulation encoder by policy gradient over non-differentiable spikes and delivering reward as feedback stimulation through a shaped deadly-corridor curriculum."
     },
     {
       "title": "Foundation Models Meet Embodied Agents",
