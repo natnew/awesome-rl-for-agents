@@ -11,7 +11,7 @@
 
 A curated map of reinforcement learning for agents: systems that learn through interaction with environments, tools, APIs, users, other agents or the physical world. The list covers agent environments, rollouts, credit assignment, reward design, tool-use learning, multi-agent RL, embodied agents and the LLM post-training methods that increasingly power agentic behaviour.
 
-It currently indexes <!--entry-count-->94<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
+It currently indexes <!--entry-count-->95<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
 
 > **RL for agents** here means optimising behaviour through a loop: the agent observes state, chooses an action (tool call, API request, message to a user or another agent, or a physical control), the environment transitions, a reward or verification signal is returned, and trajectories update the policy. That is broader than **RL for LLM behaviour alone** (instruction following, preference alignment, and trace-only updates without an environment-mediated transition)—but those methods increasingly train the **backbones** of tool-using and embodied agents, so they appear as their own slice below.
 
@@ -133,6 +133,7 @@ SWE-Gym also belongs here conceptually: its executable runtimes and unit tests t
 - **[RLTR: Reinforcement Learning with Tool-use Rewards](https://arxiv.org/abs/2508.19598)** — RL framework for LLM agent planning that rewards tool-use completeness across multi-step tool invocation sequences.
 - **[Tool-R1: Sample-Efficient Reinforcement Learning for Agentic Tool Use](https://arxiv.org/abs/2509.12867)** — RL framework for compositional, multi-step tool use through executable code generation.
 - **[ARTIST: Agentic Reasoning and Tool Integration for LLMs via Reinforcement Learning](https://arxiv.org/abs/2505.01441)** — Training approach that makes tool invocation and environment interaction first-class operations for agentic LLMs.
+- **[SLCA-GRPO: Resolving Cross-Segment Credit Misattribution in Tool-Calling RL](https://arxiv.org/abs/2609.29050)** — GRPO variant that normalises tool-execution process rewards and final-summary rewards separately and routes each only to its own token segment, trained against a schema-guided tool simulator ([code](https://github.com/SLCA-GRPO/SLCA-GRPO)).
 
 See also **[OpenPipe/ART](#training-systems-and-infrastructure)** for multi-turn tool-use agents, traced rollouts, and task-specific rewards.
 

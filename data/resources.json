@@ -1,5 +1,5 @@
 {
-  "count": 94,
+  "count": 95,
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -308,6 +308,13 @@
       "section": "Tool-use and API-agent RL",
       "tier": "core",
       "description": "Training approach that makes tool invocation and environment interaction first-class operations for agentic LLMs."
+    },
+    {
+      "title": "SLCA-GRPO: Resolving Cross-Segment Credit Misattribution in Tool-Calling RL",
+      "url": "https://arxiv.org/abs/2609.29050",
+      "section": "Tool-use and API-agent RL",
+      "tier": "core",
+      "description": "GRPO variant that normalises tool-execution process rewards and final-summary rewards separately and routes each only to its own token segment, trained against a schema-guided tool simulator ([code](https://github.com/SLCA-GRPO/SLCA-GRPO))."
     },
     {
       "title": "volcengine/verl",
