@@ -1,5 +1,5 @@
 {
-  "count": 93,
+  "count": 94,
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -210,6 +210,13 @@
       "section": "Rollouts, trajectories and credit assignment",
       "tier": "core",
       "description": "Framework for adding reinforcement learning to existing agents by decoupling agent execution from RL training."
+    },
+    {
+      "title": "Back to the Definition: Estimating Step-Level Advantages via Trajectory Graphs for Agentic Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2609.28963",
+      "section": "Rollouts, trajectories and credit assignment",
+      "tier": "core",
+      "description": "**GRAFT** merges grouped rollouts into a state–action graph and propagates sparse outcome rewards by Bellman iteration to assign step-level advantages to multi-turn agent actions."
     },
     {
       "title": "Mind2Web: Towards a Generalist Agent for the Web",

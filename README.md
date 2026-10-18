@@ -11,7 +11,7 @@
 
 A curated map of reinforcement learning for agents: systems that learn through interaction with environments, tools, APIs, users, other agents or the physical world. The list covers agent environments, rollouts, credit assignment, reward design, tool-use learning, multi-agent RL, embodied agents and the LLM post-training methods that increasingly power agentic behaviour.
 
-It currently indexes <!--entry-count-->93<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
+It currently indexes <!--entry-count-->94<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
 
 > **RL for agents** here means optimising behaviour through a loop: the agent observes state, chooses an action (tool call, API request, message to a user or another agent, or a physical control), the environment transitions, a reward or verification signal is returned, and trajectories update the policy. That is broader than **RL for LLM behaviour alone** (instruction following, preference alignment, and trace-only updates without an environment-mediated transition)—but those methods increasingly train the **backbones** of tool-using and embodied agents, so they appear as their own slice below.
 
@@ -99,6 +99,7 @@ Section-level surveys worth reading first: the agents survey and post-training s
 - **[SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning](https://arxiv.org/abs/2607.14777)** — On-policy distillation framework that converts completed agent trajectories into hindsight skills and dense token-level training signals, with code at [jinyangwu/SEED](https://github.com/jinyangwu/SEED).
 - **[Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills](https://github.com/Qwen-Applications/skill-self-play)** — Self-play reinforcement learning framework in which proposer, solver, and controller agents co-evolve skills through generated tasks, solution rollouts, and reward-guided policy updates.
 - **[Agent Lightning: Train ANY AI Agents with Reinforcement Learning](https://arxiv.org/abs/2508.03680)** — Framework for adding reinforcement learning to existing agents by decoupling agent execution from RL training.
+- **[Back to the Definition: Estimating Step-Level Advantages via Trajectory Graphs for Agentic Reinforcement Learning](https://arxiv.org/abs/2609.28963)** — **GRAFT** merges grouped rollouts into a state–action graph and propagates sparse outcome rewards by Bellman iteration to assign step-level advantages to multi-turn agent actions.
 
 ## Datasets & trajectory corpora
 
