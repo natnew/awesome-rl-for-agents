@@ -1,8 +1,5 @@
 {
-
-  "count": 97,
-  "count": 94,
-
+  "count": 99,
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -320,6 +317,13 @@
       "description": "GRPO variant that normalises tool-execution process rewards and final-summary rewards separately and routes each only to its own token segment, trained against a schema-guided tool simulator ([code](https://github.com/SLCA-GRPO/SLCA-GRPO))."
     },
     {
+      "title": "Teaching LLMs to Learn Tool Trialing and Execution through Environment Interaction",
+      "url": "https://arxiv.org/abs/2601.12762",
+      "section": "Tool-use and API-agent RL",
+      "tier": "core",
+      "description": "ToolMaster trains tool-use agents to explore unfamiliar tools before executing the task: SFT on teacher trajectories with explicit tool trials and self-correction, then GRPO with format and answer-correctness rewards over environment interaction ([code](https://github.com/NEUIR/ToolMaster))."
+    },
+    {
       "title": "volcengine/verl",
       "url": "https://github.com/volcengine/verl",
       "section": "Training systems and infrastructure",
@@ -369,19 +373,18 @@
       "description": "Black-box RL framework that optimises a policy model from rollouts produced by unmodified agent harnesses such as OpenClaw and Claude Code, and supports joint training across heterogeneous harnesses."
     },
     {
-
       "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
       "url": "https://arxiv.org/abs/2609.35750",
       "section": "Training systems and infrastructure",
       "tier": "core",
       "description": "Carries the KV cache forward across context compactions during asynchronous RL for long-horizon agents, so the policy trains on environment task rewards without re-prefilling and learns to use the streamed cache as recurrent state."
-
+    },
+    {
       "title": "Human-Agent-Society/reef",
       "url": "https://github.com/Human-Agent-Society/reef",
       "section": "Training systems and infrastructure",
       "tier": "core",
       "description": "**Reef**: serving infrastructure that puts an OpenAI- and Anthropic-compatible endpoint in front of an agent, returns a receipt for each recorded interaction so a later report can attach a numeric score or textual feedback to that rollout, and batches eligible records into policy updates — model weights via Slime and SGLang, or an agent harness tree — published as versioned artifacts to the running endpoint."
-
     },
     {
       "title": "The Rise and Potential of Large Language Model Based Agents: A Survey",
