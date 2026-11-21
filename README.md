@@ -12,8 +12,8 @@
 A curated map of reinforcement learning for agents: systems that learn through interaction with environments, tools, APIs, users, other agents or the physical world. The list covers agent environments, rollouts, credit assignment, reward design, tool-use learning, multi-agent RL, embodied agents and the LLM post-training methods that increasingly power agentic behaviour.
 
 
-It currently indexes <!--entry-count-->99<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
-It currently indexes <!--entry-count-->99<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
+It currently indexes <!--entry-count-->100<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
+It currently indexes <!--entry-count-->100<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
 
 > **RL for agents** here means optimising behaviour through a loop: the agent observes state, chooses an action (tool call, API request, message to a user or another agent, or a physical control), the environment transitions, a reward or verification signal is returned, and trajectories update the policy. That is broader than **RL for LLM behaviour alone** (instruction following, preference alignment, and trace-only updates without an environment-mediated transition)—but those methods increasingly train the **backbones** of tool-using and embodied agents, so they appear as their own slice below.
 
@@ -207,6 +207,7 @@ See also **[OpenPipe/ART](#training-systems-and-infrastructure)** for multi-turn
 - **[RLinf-Co: Reinforcement Learning-Based Sim-Real Co-Training for VLA Models](https://arxiv.org/abs/2602.12628)** — Sim-real co-training approach that warm-starts VLA policies with demonstrations and improves them through RL in simulation.
 - **[SeanCole02/doom-neuron](https://github.com/SeanCole02/doom-neuron)** — PPO harness that connects cultured human neurons on a Cortical Labs CL1 chip to VizDoom, training the stimulation encoder by policy gradient over non-differentiable spikes and delivering reward as feedback stimulation through a shaped deadly-corridor curriculum.
 - **[Foundation Models Meet Embodied Agents](https://foundation-models-meet-embodied-agents.github.io/cvpr2026/)** — Workshop resource connecting foundation models, MDP-style robot decision-making, planning, and embodied agents.
+- **[Elastra: A Simulation Framework for Elastic Bodies](https://arxiv.org/abs/2611.15112)** — A MuJoCo simulation framework for elastic surfaces that sink and rebound under load, such as mattresses and trampolines, validated against real mattress load curves; includes examples of training robot policies on elastic surfaces (e.g., Unitree G1 stand-up) ([code](https://github.com/WhymustIhaveaname/elastra)).
 
 ## Evaluation, safety and control
 

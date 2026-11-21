@@ -1,5 +1,5 @@
 {
-  "count": 99,
+  "count": 100,
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -644,6 +644,13 @@
       "section": "Embodied and physical agents",
       "tier": "adjacent",
       "description": "Workshop resource connecting foundation models, MDP-style robot decision-making, planning, and embodied agents."
+    },
+    {
+      "title": "Elastra: A Simulation Framework for Elastic Bodies",
+      "url": "https://arxiv.org/abs/2611.15112",
+      "section": "Embodied and physical agents",
+      "tier": "adjacent",
+      "description": "A MuJoCo simulation framework for elastic surfaces that sink and rebound under load, such as mattresses and trampolines, validated against real mattress load curves; includes examples of training robot policies on elastic surfaces (e.g., Unitree G1 stand-up) ([code](https://github.com/WhymustIhaveaname/elastra))."
     },
     {
       "title": "Who Validates the Validators? Aligning LLM-Assisted Evaluation of LLM Outputs with Human Preferences",
