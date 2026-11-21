@@ -12,8 +12,8 @@
 A curated map of reinforcement learning for agents: systems that learn through interaction with environments, tools, APIs, users, other agents or the physical world. The list covers agent environments, rollouts, credit assignment, reward design, tool-use learning, multi-agent RL, embodied agents and the LLM post-training methods that increasingly power agentic behaviour.
 
 
-It currently indexes <!--entry-count-->99<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
-It currently indexes <!--entry-count-->99<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
+It currently indexes <!--entry-count-->100<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
+It currently indexes <!--entry-count-->100<!--/entry-count--> curated resources, with a machine-readable copy in [`data/resources.json`](data/resources.json) kept in sync by [`scripts/build_index.py`](scripts/build_index.py).
 
 > **RL for agents** here means optimising behaviour through a loop: the agent observes state, chooses an action (tool call, API request, message to a user or another agent, or a physical control), the environment transitions, a reward or verification signal is returned, and trajectories update the policy. That is broader than **RL for LLM behaviour alone** (instruction following, preference alignment, and trace-only updates without an environment-mediated transition)—but those methods increasingly train the **backbones** of tool-using and embodied agents, so they appear as their own slice below.
 
@@ -192,6 +192,7 @@ See also **[OpenPipe/ART](#training-systems-and-infrastructure)** for multi-turn
 - **[Melting Pot](https://github.com/google-deepmind/meltingpot)** — Multi-agent environment suite for studying social interaction, cooperation, competition, and generalisation.
 - **[OpenSpiel](https://openspiel.readthedocs.io/)** — Framework for reinforcement learning and search in games, including self-play and multi-agent decision-making.
 - **[MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework](https://arxiv.org/abs/2308.00352)** — Role-specialised agents for software tasks (orchestration; often combined with feedback and eval loops).
+- **[MultiAgent-OPD: End-to-End Training of Hierarchical Multi-Agent Systems with On-Policy Distillation](https://arxiv.org/abs/2610.23234)** — Jointly trains a hierarchical search team for open-domain QA using token-level distillation for Searchers and outcome rewards for the Leader and Answerer.
 - **[microsoft/autogen](https://github.com/microsoft/autogen)** — Multi-agent orchestration with hooks for human and model feedback (often used adjacent to RL eval loops and population-style training).
 
 ## Embodied and physical agents

@@ -1,5 +1,5 @@
 {
-  "count": 99,
+  "count": 100,
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -560,6 +560,13 @@
       "section": "Multi-agent reinforcement learning",
       "tier": "adjacent",
       "description": "Role-specialised agents for software tasks (orchestration; often combined with feedback and eval loops)."
+    },
+    {
+      "title": "MultiAgent-OPD: End-to-End Training of Hierarchical Multi-Agent Systems with On-Policy Distillation",
+      "url": "https://arxiv.org/abs/2610.23234",
+      "section": "Multi-agent reinforcement learning",
+      "tier": "adjacent",
+      "description": "Jointly trains a hierarchical search team for open-domain QA using token-level distillation for Searchers and outcome rewards for the Leader and Answerer."
     },
     {
       "title": "microsoft/autogen",
