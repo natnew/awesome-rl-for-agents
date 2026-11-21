@@ -1,5 +1,5 @@
 {
-  "count": 98,
+  "count": 99,
   "resources": [
     {
       "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
@@ -315,6 +315,13 @@
       "section": "Tool-use and API-agent RL",
       "tier": "core",
       "description": "GRPO variant that normalises tool-execution process rewards and final-summary rewards separately and routes each only to its own token segment, trained against a schema-guided tool simulator ([code](https://github.com/SLCA-GRPO/SLCA-GRPO))."
+    },
+    {
+      "title": "Teaching LLMs to Learn Tool Trialing and Execution through Environment Interaction",
+      "url": "https://arxiv.org/abs/2601.12762",
+      "section": "Tool-use and API-agent RL",
+      "tier": "core",
+      "description": "ToolMaster trains tool-use agents to explore unfamiliar tools before executing the task: SFT on teacher trajectories with explicit tool trials and self-correction, then GRPO with format and answer-correctness rewards over environment interaction ([code](https://github.com/NEUIR/ToolMaster))."
     },
     {
       "title": "volcengine/verl",
